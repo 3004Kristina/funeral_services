@@ -486,23 +486,22 @@ html, body {
             justify-content: flex-start;
             margin: 0 -20px;
 
+            li + li:before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 20px;
+                height: 1px;
+                background: #545454;
+                top: 50%;
+                left: -10px;
+            }
+
             li{
-
-                a + a:before{
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    width: 20px;
-                    height: 1px;
-                    background: #545454;
-                    top: 50%;
-                    right: 10px;
-
-                }
+                position: relative;
                 a{
                     display: block;
                     text-decoration: none;
-                    position: relative;
                     color: #545454;
                     font-size: 13px;
                     font-weight: 400;
@@ -510,6 +509,11 @@ html, body {
                     letter-spacing: normal;
                     line-height: 76.2px;
                     margin: 0 20px;
+                    transition: color 0.2s;
+
+                    &:hover, &:focus{
+                        color: #9b062d;
+                    }
 
                     &:active{
                         color: #a4a4a4;
@@ -615,22 +619,22 @@ html, body {
             .breadcrumbs{
                 margin: 0 -10px;
 
-                li{
+                a + a:before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 7px;
+                    height: 1px;
+                    background: #545454;
+                    top: 50%;
+                    left: -3px;
+                }
 
-                    a + a:before{
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        width: 20px;
-                        height: 1px;
-                        background: #545454;
-                        top: 50%;
-                        right: 10px;
-                    }
+                li{
 
                     a{
                         line-height: 50px;
-                        margin: 0 10px;
+                        margin: 0 8px;
                     }
                 }
             }
@@ -646,6 +650,166 @@ html, body {
     }
 }
 /*! SECTION MORGUES PAGE CONTENT END */
+
+/*! SECTION CEMETERIES PAGE CONTENT START */
+.cemeteries_content_wrapper{
+    .cemeteries_content{
+        padding-bottom: 70px;
+        h2{
+            color: #1b1b1b;
+            font-size: 20px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 33.02px;
+            text-transform: uppercase;
+        }
+
+        .breadcrumbs{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin: 0 -20px;
+
+            li + li:before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 20px;
+                height: 1px;
+                background: #545454;
+                top: 50%;
+                left: -10px;
+            }
+
+            li{
+                position: relative;
+
+                a{
+                    display: block;
+                    text-decoration: none;
+                    color: #545454;
+                    font-size: 13px;
+                    font-weight: 400;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: 76.2px;
+                    margin: 0 20px;
+                    transition: color 0.2s;
+
+                    &:hover, &:focus{
+                        color: #9b062d;
+                    }
+
+                    &:active{
+                        color: #a4a4a4;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .descr{
+            color: #1a1a1a;
+            font-size: 14px;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 25.4px;
+
+            .underline{
+                text-decoration: underline;
+            }
+        }
+
+        .cemeteries_list_wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 40px 0;
+
+            &.middle{
+                border-top: 1px solid #dbdbdb;
+                border-bottom: 1px solid #dbdbdb;
+            }
+
+            .cemeteries_list{
+                list-style: circle;
+                padding: 0;
+                margin-left: 18px;
+                margin-right: 80px;
+
+                li{
+                    color: #9b062d;
+                    a{
+                        color: #1a1a1a;
+                        font-size: 15px;
+                        font-weight: 400;
+                        font-style: normal;
+                        letter-spacing: normal;
+                        line-height: 30.48px;
+                        transition: color 0.2s;
+
+                        &:hover, &:focus{
+                            color: #9b062d;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 980px){
+        .cemeteries_content{
+            .cemeteries_list_wrapper{
+                .cemeteries_list{
+                    margin-right: 50px;
+                }
+            }
+        }
+    }
+    @media (max-width: 780px){
+        .cemeteries_content{
+            padding-bottom: 40px;
+
+            h2{
+                font-size: 16px;
+                line-height: 26px;
+            }
+
+            .breadcrumbs{
+                margin: 0 -10px;
+
+                li + li:before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 7px;
+                    height: 1px;
+                    background: #545454;
+                    top: 50%;
+                    left: -3px;
+                }
+
+                li{
+                    a{
+                        line-height: 50px;
+                        margin: 0 8px;
+                    }
+                }
+            }
+
+            .cemeteries_list_wrapper{
+                display: block;
+                padding: 25px 0;
+            }
+        }
+    }
+}
+/*! SECTION CEMETERIES PAGE CONTENT END */
 
 /*!SECTION REFERENCE INFO START */
 .reference_info_wrapper{
