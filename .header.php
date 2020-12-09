@@ -18,7 +18,9 @@
                 <div class="header_top_item">
                     <div class="logo_wrapper">
                         <div class="logo_img">
-                            <img src="/img/logo.png" alt="logo">
+                            <a href="/">
+                                <img src="/img/logo.png" alt="logo">
+                            </a>
                         </div>
                         <div class="logo_content">
                             <p class="logo_text_up">
@@ -35,7 +37,7 @@
                 <div class="header_top_item">
                     <div class="contact_info_wrapper">
                         <div class="phone">
-                            <img src="/img/icons/auricular-phone-symbol-in-a-circle.svg" alt="phone">
+                            <img src="/img/icons/auricular-phone-symbol-in-a-circle.png" alt="phone">
                             <a href="tel:+74951523333">+7 (495) 152 33 33</a>
                         </div>
                         <div class="work_time">
@@ -51,7 +53,9 @@
 
                     <div class="shopping_cart">
                         <a href="#">
-                        <img src="/img/icons/shopping-cart%20(1).svg" alt="cart">
+                        <img src="/img/icons/shopping-cart%20(1).png" alt="cart">
+                        </a>
+                        <a href="#">
                         <span>Корзина</span>
                         </a>
                     </div>
@@ -81,7 +85,7 @@
                     <button type="submit">
                         <img src="/img/icons/search.svg" alt="search">
                     </button>
-                    <input type="search">
+                    <input type="search" placeholder="поиск по сайту...">
                 </div>
             </div>
             
