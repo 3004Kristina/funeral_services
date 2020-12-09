@@ -153,6 +153,7 @@ html, body {
                             line-height: normal;
                             text-align: left;
                             text-transform: uppercase;
+                            transition: color 0.2s;
 
                             &:hover, &:focus{
                                 color: #9b062d;
@@ -183,6 +184,8 @@ html, body {
                     a {
                         display: block;
                         text-decoration: none;
+                        transition: color 0.2s;
+
                         img {
                             display: block;
                             width: 25px;
@@ -243,6 +246,7 @@ html, body {
                             line-height: 26.91px;
                             text-align: left;
                             text-transform: uppercase;
+                            transition: color 0.2s;
 
                             &.active{
                                 border-bottom: 2px solid #ffffff;
@@ -459,6 +463,374 @@ html, body {
 }
 /*! HEADER END */
 
+/*! SECTION MORGUES PAGE CONTENT START */
+.morgues_content_wrapper{
+    .morgues_content{
+        padding-bottom: 70px;
+        h2{
+            color: #1b1b1b;
+            font-size: 20px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 33.02px;
+            text-transform: uppercase;
+        }
+
+        .breadcrumbs{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin: 0 -20px;
+
+            li{
+
+                a + a:before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 20px;
+                    height: 1px;
+                    background: #545454;
+                    top: 50%;
+                    right: 10px;
+
+                }
+                a{
+                    display: block;
+                    text-decoration: none;
+                    position: relative;
+                    color: #545454;
+                    font-size: 13px;
+                    font-weight: 400;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: 76.2px;
+                    margin: 0 20px;
+
+                    &:active{
+                        color: #a4a4a4;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        h6{
+            color: #1a1a1a;
+            font-size: 15px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 25.4px;
+        }
+
+        .descr{
+            color: #1a1a1a;
+            font-size: 14px;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 25.4px;
+
+            .underline{
+                text-decoration: underline;
+            }
+        }
+
+        .morgues_kinds{
+            list-style: circle;
+            padding: 0;
+            margin-left: 18px;
+
+            li{
+                color: #9b062d;
+
+                span{
+                    color: #1a1a1a;
+                    font-size: 14px;
+                    font-weight: 400;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: 25.4px;
+
+                    .underline{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .morgues_list_wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            .morgues_list{
+                list-style: circle;
+                padding: 0;
+                margin-left: 18px;
+                margin-right: 80px;
+
+                li{
+                    color: #9b062d;
+                    a{
+                        color: #1a1a1a;
+                        font-size: 15px;
+                        font-weight: 400;
+                        font-style: normal;
+                        letter-spacing: normal;
+                        line-height: 30.48px;
+
+                        &:hover, &:focus{
+                            color: #9b062d;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 980px){
+        .morgues_content{
+            .morgues_list_wrapper{
+                .morgues_list{
+                    margin-right: 50px;
+                }
+            }
+        }
+    }
+    @media (max-width: 780px){
+        .morgues_content{
+            padding-bottom: 40px;
+
+            h2{
+                font-size: 16px;
+                line-height: 26px;
+            }
+
+            .breadcrumbs{
+                margin: 0 -10px;
+
+                li{
+
+                    a + a:before{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 20px;
+                        height: 1px;
+                        background: #545454;
+                        top: 50%;
+                        right: 10px;
+                    }
+
+                    a{
+                        line-height: 50px;
+                        margin: 0 10px;
+                    }
+                }
+            }
+
+            h6{
+                margin-bottom: 20px;
+            }
+
+            .morgues_list_wrapper{
+                display: block;
+            }
+        }
+    }
+}
+/*! SECTION MORGUES PAGE CONTENT END */
+
+/*!SECTION REFERENCE INFO START */
+.reference_info_wrapper{
+    background-image: url(../img/fon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0 38px;
+
+    .reference_info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .reference_info_block{
+            h2{
+                margin: 0 0 60px 0;
+                color: #ffffff;
+                font-size: 20px;
+                font-weight: 700;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: 33.02px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .reference_info_list{
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 45px;
+
+                .reference_info_item{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    img{
+                        display: block;
+                        width: 48px;
+                        height: 50px;
+                        margin-right: 10px;
+                        filter: invert(100%);
+                    }
+
+                    a{
+                        display: block;
+                        color: #ffffff;
+                        font-size: 20px;
+                        font-weight: 700;
+                        font-style: normal;
+                        letter-spacing: normal;
+                        line-height: 33.02px;
+                        text-align: left;
+                        text-transform: uppercase;
+                        transition: color 0.2s;
+
+                        &:hover, &:focus{
+                            color: #9b062d;
+                        }
+                    }
+                }
+            }
+            
+            .reference_info_content{
+                max-width: 311px;
+                background: #9b062d;
+                padding: 30px;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+
+                h4{
+                    margin: 0;
+                    color: #ffffff;
+                    font-size: 19px;
+                    font-weight: 400;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: 22.86px;
+                    text-align: left;
+                }
+
+                p{
+                    color: #ffffff;
+                    font-size: 14px;
+                    font-weight: 400;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: 22.86px;
+                    text-align: left;
+                }
+
+                .btn{
+                    color: #1f1f1f;
+                    background: #ffffff;
+                    transition: background 0.2s, color 0.2s;
+
+                    &:hover{
+                        background: #c21b47;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 980px){
+        background-image: none;
+        .reference_info{
+            display: block;
+
+            .reference_info_block{
+                h2{
+                    color: #1a1a1a;
+                }
+
+                .reference_info_list{
+
+                    .reference_info_item{
+
+                        img{
+                            filter: unset;
+                        }
+
+                        a{
+                            color: #1a1a1a;
+                        }
+                    }
+                }
+
+                .reference_info_content{
+                    margin: 50px auto;
+                    max-width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 780px){
+        background-image: none;
+        padding: 0 0 38px;
+        .reference_info{
+            display: block;
+
+            .reference_info_block{
+                h2{
+                    margin: 0 0 40px 0;
+                    color: #1a1a1a;
+                    text-align: left;
+                    font-size: 18px;
+                }
+
+                .reference_info_list{
+                    grid-template-rows: repeat(4, 1fr);
+                    grid-template-columns: 1fr;
+                    grid-gap: 30px;
+
+                    .reference_info_item{
+
+                        a{
+                            color: #1a1a1a;
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .reference_info_content{
+                    margin: 50px auto;
+                    max-width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+            }
+        }
+    }
+}
+/*!SECTION REFERENCE INFO END */
+
 /*! FOOTER START */
 .footer_wrapper{
     background: #252525;
@@ -507,6 +879,7 @@ html, body {
                         letter-spacing: normal;
                         line-height: normal;
                         text-align: left;
+                        transition: color 0.2s;
 
                         &.articles{
                             color: #f3f3f3;
@@ -601,6 +974,7 @@ html, body {
                         letter-spacing: normal;
                         line-height: normal;
                         padding: 25px 30px;
+                        transition: color 0.2s;
 
                         &:hover, &:focus{
                             color: #9b062d;
@@ -639,6 +1013,7 @@ html, body {
                     line-height: normal;
                     text-align: left;
                     text-transform: uppercase;
+                    transition: color 0.2s;
 
                     &:hover, &:focus{
                         color: #9b062d;
