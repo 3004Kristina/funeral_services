@@ -705,7 +705,7 @@ html, body {
                     }
 
                     &:active{
-                        color: #a4a4a4;
+                        color: #afafaf;
                         font-weight: 400;
                     }
                 }
@@ -730,31 +730,36 @@ html, body {
             flex-direction: row;
             justify-content: space-between;
             padding: 40px 0;
+            margin: 0 -15px;
 
             &.middle{
                 border-top: 1px solid #dbdbdb;
                 border-bottom: 1px solid #dbdbdb;
             }
 
-            .cemeteries_list{
-                list-style: circle;
-                padding: 0;
-                margin-left: 18px;
-                margin-right: 80px;
+            .cemeteries {
+                width: calc(100%/4);
+                margin: 0 15px;
+                .cemeteries_list {
+                    list-style: circle;
+                    padding: 0;
+                    margin-left: 18px;
 
-                li{
-                    color: #9b062d;
-                    a{
-                        color: #1a1a1a;
-                        font-size: 15px;
-                        font-weight: 400;
-                        font-style: normal;
-                        letter-spacing: normal;
-                        line-height: 30.48px;
-                        transition: color 0.2s;
+                    li {
+                        color: #9b062d;
 
-                        &:hover, &:focus{
-                            color: #9b062d;
+                        a {
+                            color: #1a1a1a;
+                            font-size: 15px;
+                            font-weight: 400;
+                            font-style: normal;
+                            letter-spacing: normal;
+                            line-height: 30.48px;
+                            transition: color 0.2s;
+
+                            &:hover, &:focus {
+                                color: #9b062d;
+                            }
                         }
                     }
                 }
@@ -762,15 +767,6 @@ html, body {
         }
     }
 
-    @media (max-width: 980px){
-        .cemeteries_content{
-            .cemeteries_list_wrapper{
-                .cemeteries_list{
-                    margin-right: 50px;
-                }
-            }
-        }
-    }
     @media (max-width: 780px){
         .cemeteries_content{
             padding-bottom: 40px;
@@ -805,6 +801,10 @@ html, body {
             .cemeteries_list_wrapper{
                 display: block;
                 padding: 25px 0;
+
+                .cemeteries{
+                    width: 100%;
+                }
             }
         }
     }
@@ -994,6 +994,258 @@ html, body {
     }
 }
 /*!SECTION REFERENCE INFO END */
+
+/*!SECTION CONTACTS PAGE CONTENT START */
+.contacts_content_wrapper{
+    h2{
+        color: #1b1b1b;
+        font-size: 20px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 33.02px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .breadcrumbs{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0 -20px;
+
+        li + li:before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 1px;
+            background: #545454;
+            top: 50%;
+            left: -10px;
+        }
+
+        li{
+            position: relative;
+
+            a{
+                display: block;
+                text-decoration: none;
+                color: #545454;
+                font-size: 13px;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: 76.2px;
+                margin: 0 20px;
+                transition: color 0.2s;
+
+                &:hover, &:focus{
+                    color: #9b062d;
+                }
+
+                &:active{
+                    color: #afafaf;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    
+    .contacts_content{
+        background: #f8f8f8;
+        border-top: 1px solid #d7d7d7;;
+        border-bottom: 1px solid #d7d7d7;
+        padding: 60px 0;
+        .map_contacts_wrapper{
+            display: flex;
+            flex-direction: row;
+
+            .map{
+                width: 734px;
+            }
+
+            .contacts{
+                padding-left: 50px;
+
+                h4{
+                    margin-top: 0;
+                    color: #1b1b1b;
+                    font-size: 18px;
+                    font-weight: 700;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: 33.02px;
+                    text-align: left;
+                    text-transform: uppercase;
+                }
+
+                .fa{
+                    color: #9b062d;
+                    margin-right: 15px;
+                }
+
+                p{
+                    margin: 0;
+                    a{
+                        color: #000000;
+                        text-decoration: none;
+                        font-size: 18px;
+                        font-weight: 400;
+                        font-style: normal;
+                        letter-spacing: normal;
+                        line-height: normal;
+                        text-align: left;
+
+                        &:hover, &:focus{
+                            color: #9b062d;
+                        }
+                    }
+                }
+
+                .addresses{
+                    margin-top: 65px;
+
+                    h4{
+                        margin: 0 0 15px;
+                    }
+
+                    p{
+                        color: #000000;
+                        font-size: 18px;
+                        font-weight: 400;
+                        font-style: normal;
+                        letter-spacing: normal;
+                        line-height: 46px;
+                        text-align: left;
+                    }
+                }
+
+                .phone_wrapper{
+                    margin: 27px 0;
+
+                    .phone{
+                        margin-bottom: 5px;
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            color: #9b062d;
+                            font-size: 32px;
+                            font-weight: 700;
+                            font-style: normal;
+                            letter-spacing: normal;
+                            line-height: normal;
+                        }
+                    }
+
+                    .work_time{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        img{
+                            display: block;
+                            margin-right: 10px;
+                        }
+
+                        p{
+                            color: #171717;
+                            font-size: 18px;
+                            font-weight: 400;
+                            font-style: normal;
+                            letter-spacing: normal;
+                            line-height: normal;
+                        }
+                    }
+                }
+
+                .btn{
+                    padding: 24px 54px;
+                }
+            }
+        }
+    }
+
+    .contacts_districts_wrapper{
+        padding: 50px 0;
+        .contacts_districts{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            .contacts_districts_item{
+                max-width: 650px;
+                p{
+                    margin: 0;
+                    color: #1b1b1b;
+                    font-size: 18px;
+                    font-weight: 700;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: 33.02px;
+                    text-align: left;
+                    text-transform: uppercase;
+                }
+
+                .phone_wrapper{
+                    margin: 27px 0;
+
+                    .phone{
+                        margin-bottom: 5px;
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            color: #9b062d;
+                            font-size: 32px;
+                            font-weight: 700;
+                            font-style: normal;
+                            letter-spacing: normal;
+                            line-height: normal;
+                        }
+                    }
+
+                    .work_time{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        img{
+                            display: block;
+                            margin-right: 10px;
+                            width: 24px;
+                            height: 26px;
+                        }
+
+                        p{
+                            color: #171717;
+                            font-size: 18px;
+                            font-weight: 400;
+                            font-style: normal;
+                            letter-spacing: normal;
+                            line-height: normal;
+                            text-transform: none;
+                        }
+                    }
+                }
+
+                .btn{
+                    padding: 24px 54px;
+                }
+
+                img{
+                    display: block;
+                    width: 465px;
+                }
+            }
+        }
+    }
+}
+/*!SECTION CONTACTS PAGE CONTENT END */
 
 /*! FOOTER START */
 .footer_wrapper{
