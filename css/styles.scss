@@ -4292,6 +4292,506 @@ html, body {
 }
 /*! SECTION FUNERAL ORGANIZATION PAGE TEXT CONTENT END */
 
+/*! SECTION SERVICE PAGE FUNERAL ARRANGEMENTS START */
+.service_page_arrangements_wrapper {
+    background: #f3f3f3;
+    padding: 53px 0 69px;
+
+    h2 {
+        margin: 0;
+        color: #191919;
+        font-size: 20px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 33.02px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .service_page_arrangements {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-image: url(../img/icons/s-bg.png);
+        background-repeat: no-repeat;
+        background-size: 1025px;
+        background-position: 141px 87px;
+        padding-top: 52px;
+
+        .advantages_item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                display: block;
+                margin-bottom: 20px;
+            }
+
+            h2{
+                margin: 0;
+                color: #000000;
+                font-size: 18px;
+                font-weight: 700;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: 25.4px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+        }
+    }
+
+    @media (max-width: 1310px) {
+        .main_services_page_advantages {
+            background-size: 870px;
+        }
+    }
+    @media (max-width: 1260px) {
+        h2 {
+            font-size: 18px;
+            line-height: 33.02px;
+        }
+
+        .main_services_page_advantages {
+            background-size: 681px;
+            background-position: 116px 66px;
+        }
+    }
+    @media (max-width: 980px) {
+        padding: 50px 0;
+
+        h2 {
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        .main_services_page_advantages {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-image: none;
+            padding-top: 52px;
+
+            .advantages_item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: calc(100% / 2);
+                margin-bottom: 30px;
+
+                img {
+                    display: block;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 20.32px;
+                }
+            }
+        }
+    }
+    @media (max-width: 780px) {
+        padding: 40px 0;
+        margin-bottom: 40px;
+
+        .main_services_page_advantages {
+            display: block;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-image: none;
+            padding-top: 52px;
+
+            .advantages_item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 30px;
+
+                img {
+                    display: block;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 20.32px;
+                }
+            }
+        }
+    }
+}
+/*! SECTION SERVICE PAGE FUNERAL ARRANGEMENTS END */
+
+/*! SECTION SERVICE PAGE PRICE START */
+.service_page_price_wrapper {
+    padding: 50px 0 0;
+
+    .prices_contract_wrapper {
+        display: flex;
+        flex-direction: row;
+
+        .prices_content {
+
+            .prices_navigation_tabs {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+
+                li {
+                    a {
+                        display: block;
+                        padding: 35px 55px;
+                        text-decoration: none;
+                        color: #1b1b1b;
+                        font-size: 19px;
+                        font-weight: 700;
+                        font-style: normal;
+                        letter-spacing: normal;
+                        line-height: normal;
+                        text-align: left;
+                        text-transform: uppercase;
+
+
+                        &.active {
+                            background: #f3f3f3;
+                            border-top: 4px solid #cccccc;
+                        }
+                    }
+                }
+            }
+
+            .prices_content_tabs {
+
+                .tab {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: stretch;
+                    padding: 30px;
+                    background: #f3f3f3;
+
+                    .tab_item {
+                        display: flex;
+                        flex-direction: row;
+                        text-decoration: none;
+                        padding: 15px 40px;
+                        background-color: #ffffff;
+                        margin-bottom: 30px;
+                        border-radius: 5px;
+                        transition: background 0.2s, box-shadow 0.2s;
+
+                        .descr {
+                            h4 {
+                                margin: 0;
+                                color: #474747;
+                                font-size: 20px;
+                                font-weight: 700;
+                                font-style: normal;
+                                letter-spacing: normal;
+                                line-height: 33.02px;
+                                text-align: left;
+                                text-transform: uppercase;
+                            }
+
+                            p {
+                                color: #474747;
+                                font-size: 14px;
+                                font-weight: 400;
+                                font-style: normal;
+                                letter-spacing: normal;
+                                line-height: 22.86px;
+                                text-align: left;
+                            }
+                        }
+
+                        .price {
+                            color: #9b062d;
+                            font-size: 25px;
+                            font-weight: 700;
+                            font-style: normal;
+                            letter-spacing: normal;
+                            line-height: 47.17px;
+                            text-align: left;
+                            text-transform: uppercase;
+                            flex-shrink: 0;
+
+                            .fa {
+                                color: #9b062d;
+                                font-size: 22px;
+                            }
+                        }
+
+                        &:hover, &:focus {
+                            box-shadow: 0 0 35px rgba(0, 2, 4, 0.12);
+                            background: #9b062d;
+
+                            & h4, p, .price, .fa {
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .contract_content {
+            margin-left: 35px;
+            padding-top: 97px;
+            display: flex;
+            flex-direction: column;
+            align-content: flex-start;
+            justify-content: flex-start;
+            max-width: 331px;
+
+            a.contract_item {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.16);
+                background-color: #f3f3f3;
+                padding: 25px 25px 60px;
+                width: 331px;
+                text-decoration: none;
+                border-radius: 5px;
+
+                img {
+                    display: block;
+                    width: 53px;
+                    height: 53px;
+                    margin-right: 10px;
+                }
+
+                h4 {
+                    margin: 0;
+                    color: #232323;
+                    font-size: 15px;
+                    font-weight: 400;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: 22.86px;
+                    text-align: left;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    margin: 20px 0 0;
+                    color: #6b6b6b;
+                    font-size: 13px;
+                    font-weight: 400;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: 20.32px;
+                    text-align: left;
+                }
+
+                &:hover, &:focus {
+                    box-shadow: 0 0 15px #8b8a8a;
+                }
+            }
+
+            h2{
+                margin: 35px 5px 28px;
+                color: #1b1b1b;
+                font-size: 15px;
+                font-weight: 700;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: 25.4px;
+                text-align: left;
+                text-transform: uppercase;
+            }
+
+            .features {
+                list-style: circle;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    color: #9b062d;
+                    margin-left: 18px;
+                    margin-bottom: 15px;
+
+                    span {
+
+                        color: #3d3c3c;
+                        font-size: 13px;
+                        font-weight: 400;
+                        font-style: normal;
+                        letter-spacing: normal;
+                        line-height: 22.86px;
+                    }
+                }
+            }
+        }
+    }
+
+    //@media (max-width: 1260px) {
+    //    .prices_contract_wrapper {
+    //        .prices_content {
+    //            .prices_navigation_tabs {
+    //                li {
+    //                    a {
+    //                        padding: 27px 55px;
+    //                        font-size: 16px;
+    //                        text-align: center;
+    //                    }
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
+    //@media (max-width: 980px) {
+    //    padding: 40px 0;
+    //    .prices_contract_wrapper {
+    //        display: block;
+    //
+    //        .prices_content {
+    //            .prices_navigation_tabs {
+    //                li {
+    //                    a {
+    //                        padding: 27px 55px;
+    //                        font-size: 16px;
+    //                        text-align: center;
+    //                    }
+    //                }
+    //            }
+    //        }
+    //
+    //        .contract_content {
+    //            padding-top: 40px;
+    //
+    //            a.contract_item {
+    //                padding: 25px;
+    //                width: 331px;
+    //                height: 100%;
+    //                margin: 0 auto;
+    //
+    //
+    //                img {
+    //                    display: block;
+    //                    width: 53px;
+    //                    height: 53px;
+    //                    margin-right: 10px;
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
+    //@media (max-width: 780px) {
+    //    padding: 40px 0 0;
+    //
+    //    .prices_contract_wrapper {
+    //        display: block;
+    //
+    //        .prices_content {
+    //
+    //            .prices_navigation_tabs {
+    //                li {
+    //                    a {
+    //                        display: block;
+    //                        padding: 15px;
+    //                        font-size: 13px;
+    //                        text-align: center;
+    //                    }
+    //                }
+    //            }
+    //
+    //            .prices_content_tabs {
+    //
+    //                .tab {
+    //                    display: flex;
+    //                    flex-direction: column;
+    //                    align-items: stretch;
+    //                    padding: 30px;
+    //
+    //
+    //                    .tab_item {
+    //                        display: flex;
+    //                        flex-direction: column;
+    //                        margin-bottom: 30px;
+    //                        border-radius: 5px;
+    //
+    //                        .descr {
+    //                            h4 {
+    //                                font-size: 18px;
+    //                                line-height: 28px;
+    //                            }
+    //                        }
+    //                    }
+    //                }
+    //            }
+    //        }
+    //
+    //        .contract_content {
+    //            margin: 0;
+    //            padding-top: 40px;
+    //            display: grid;
+    //            grid-template-rows: repeat(3, 1fr);
+    //            grid-gap: 25px;
+    //
+    //
+    //            a.contract_item {
+    //                padding: 25px;
+    //                width: 280px;
+    //                height: 100%;
+    //
+    //                img {
+    //                    display: block;
+    //                    width: 53px;
+    //                    height: 53px;
+    //                    margin-right: 10px;
+    //                }
+    //
+    //                h4 {
+    //                    font-size: 14px;
+    //                    line-height: 20px;
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
+}
+/*! SECTION SERVICE PAGE PRICE END */
+
+/*! SECTION SERVICE PAGE TEXT CONTENT START */
+.service_page_text_wrapper{
+    padding: 55px 0;
+    h2{
+        margin: 0;
+        color: #1b1b1b;
+        font-size: 20px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 33.02px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+    p{
+        color: #1a1a1a;
+        font-size: 14px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 25.4px;
+        text-align: left;
+
+        .underline{
+            text-decoration: underline;
+        }
+    }
+}
+/*! SECTION SERVICE PAGE TEXT CONTENT END */
+
 /*! SECTION SERVICE PAGE CONTRACT START */
 .service_page_contract_wrapper {
     background-image: url(../img/fon.png);
@@ -4308,7 +4808,7 @@ html, body {
 
         .contract_text {
             position: relative;
-            margin-left: 40px;
+            margin-left: 90px;
 
             h4 {
                 margin: 0;
@@ -4341,8 +4841,8 @@ html, body {
                 height: 68px;
                 display: block;
                 position: absolute;
-                top: -15px;
-                left: -40px;
+                top: 0;
+                left: -90px;
                 color: #ffffff;
                 font-size: 76px;
                 font-weight: 700;
@@ -4354,81 +4854,96 @@ html, body {
 
         .contract_action {
             .btn {
-                padding: 26px 55px;
+                box-shadow: 1px 1px 9px 2px rgba(36, 36, 36, 0.26);
+                background-color: #ffffff;
+                padding: 22px 55px;
+                color: #1c1c1c;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 15px;
+                font-weight: 500;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: 25.38px;
+                text-align: left;
+                text-transform: uppercase;
+
+                &:hover{
+                    box-shadow: 0 0 15px #8b8a8a;
+                }
             }
         }
     }
 
-    //@media (max-width: 980px) {
-    //    .main_page_contract {
-    //        .contract_text {
-    //            position: relative;
-    //            margin-left: 40px;
-    //
-    //            h4 {
-    //                margin: 0;
-    //                color: #ffffff;
-    //                font-size: 16px;
-    //                font-weight: 700;
-    //                font-style: normal;
-    //                letter-spacing: normal;
-    //                line-height: 28px;
-    //                text-align: left;
-    //                text-transform: uppercase;
-    //            }
-    //
-    //            p {
-    //                margin: 0;
-    //                color: #ffffff;
-    //                font-size: 14px;
-    //                font-weight: 500;
-    //                font-style: normal;
-    //                letter-spacing: normal;
-    //                line-height: normal;
-    //                text-align: left;
-    //                max-width: 350px;
-    //            }
-    //
-    //
-    //        }
-    //
-    //        .contract_action {
-    //            .btn {
-    //                padding: 20px 35px;
-    //            }
-    //        }
-    //    }
-    //}
-    //@media (max-width: 780px) {
-    //    .main_page_contract {
-    //        display: block;
-    //
-    //        .contract_text {
-    //            position: relative;
-    //            margin-left: 40px;
-    //
-    //            h4 {
-    //                font-size: 16px;
-    //                line-height: 28px;
-    //                text-shadow: 1px -1px 2px #1f1f1f;
-    //            }
-    //
-    //            p {
-    //                font-size: 14px;
-    //                max-width: 350px;
-    //                text-shadow: 1px -1px 2px #1f1f1f;
-    //            }
-    //        }
-    //
-    //        .contract_action {
-    //            .btn {
-    //                margin-top: 20px;
-    //                width: 100%;
-    //                padding: 20px 35px;
-    //            }
-    //        }
-    //    }
-    //}
+    @media (max-width: 980px) {
+        .service_page_contract {
+            .contract_text {
+                position: relative;
+                margin-left: 40px;
+
+                h4 {
+                    margin: 0;
+                    color: #ffffff;
+                    font-size: 16px;
+                    font-weight: 700;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: 28px;
+                    text-align: left;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    margin: 0;
+                    color: #ffffff;
+                    font-size: 14px;
+                    font-weight: 500;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: normal;
+                    text-align: left;
+                    max-width: 350px;
+                }
+
+
+            }
+
+            .contract_action {
+                .btn {
+                    padding: 20px 35px;
+                }
+            }
+        }
+    }
+    @media (max-width: 780px) {
+        .service_page_contract {
+            display: block;
+
+            .contract_text {
+                position: relative;
+                margin-left: 40px;
+
+                h4 {
+                    font-size: 16px;
+                    line-height: 28px;
+                    text-shadow: 1px -1px 2px #1f1f1f;
+                }
+
+                p {
+                    font-size: 14px;
+                    max-width: 350px;
+                    text-shadow: 1px -1px 2px #1f1f1f;
+                }
+            }
+
+            .contract_action {
+                .btn {
+                    margin-top: 20px;
+                    width: 100%;
+                    padding: 20px 35px;
+                }
+            }
+        }
+    }
 }
 /*! SECTION SERVICE PAGE CONTRACT END */
 
