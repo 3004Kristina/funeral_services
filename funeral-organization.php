@@ -29,7 +29,7 @@
                 </ul>
                 <div class="btn_wrapper">
                     <button class="btn">Вызов ритуального агента ОНЛАЙН</button>
-                    <a href="/" class="btn grey">Вызов ритуального агента ОНЛАЙН</a>
+                    <a href="/" class="btn grey">Расчитать стоимость похорон</a>
                 </div>
             </div>
             <div class="info_item">
