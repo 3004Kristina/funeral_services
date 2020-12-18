@@ -37,12 +37,46 @@ jQuery(function() {
         jQuery('.prices_content_tabs .tab').not($tab).hide();
     });
 
+
+    jQuery('.size_wrapper .size .size_item').on('click', function(e){
+        let $this = jQuery(this);
+        $this.addClass('active').not($this).removeClass('active');
+    });
+
+
     jQuery('.main_page_banner_carousel').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-prev slick-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
         nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+    });
+
+    jQuery('.product_carousel').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev slick-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+    });
+
+    jQuery('.qty').each(function() {
+        let $qty = jQuery(this),
+            $input = $qty.find('input[type="number"]'),
+            $up = $qty.find('.up'),
+            $down = $qty.find('.down');
+
+        $up.on('click', function() {
+            let res = $input.val();
+            res++;
+            $input.val(res);
+        });
+
+        $down.on('click', function() {
+            let res = $input.val();
+            res--;
+            $input.val(Math.max(res, 1));
+        });
     });
 
 });
