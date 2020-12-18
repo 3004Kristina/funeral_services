@@ -4135,26 +4135,20 @@ html, body {
     }
 
     table{
-
-        tr{
-            padding: 27px 30px;
-            color: #fbfbfb;
-            font-size: 18px;
-            font-weight: 500;
-            font-style: normal;
-            letter-spacing: normal;
-            line-height: 33.02px;
-            text-align: left;
-
-            &.main{
-                background-color: #323232;
-                color: #fbfbfb;
-                font-size: 18px;
-                font-weight: 500;
-                font-style: normal;
-                letter-spacing: normal;
-                line-height: 33.02px;
-                text-align: left;
+        border: none;
+        border-collapse: collapse;
+        thead{
+            tr{
+                th{
+                    padding: 25px 30px;
+                    color: #fbfbfb;
+                    font-size: 18px;
+                    font-weight: 500;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: normal;
+                    text-align: left;
+                }
             }
         }
     }
