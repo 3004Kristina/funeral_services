@@ -61,10 +61,10 @@ jQuery(function() {
         nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
     });
 
-    jQuery('.product_page_content .content_list .product_carousel .carousel_item img').on('click', function(e){
+    jQuery('.product_page_content .content_list .content_item .product_carousel .carousel_item img').on('click', function(e){
         let $this = jQuery(this);
-        jQuery()
-
+        jQuery('.product_page_content .content_list .content_item .img_wrapper img').removeClass('active');
+        jQuery(`.product_page_content .content_list .content_item .img_wrapper img[src="${$this.attr('src')}"]`).addClass('active');
     });
 
     jQuery('.qty').each(function() {
@@ -84,6 +84,12 @@ jQuery(function() {
             res--;
             $input.val(Math.max(res, 1));
         });
+    });
+
+    jQuery('.funeral_calculator').select2({
+        minimumResultsForSearch: Infinity,
+        placeholder: "Не выбрано",
+
     });
 
 });
