@@ -6,20 +6,46 @@ DG.autoload(function() {
     myMap.setCenter(new DG.GeoPoint(37.609218, 55.753559), 11);
     myMap.controls.add(new DG.Controls.Zoom());
 
-    let marker = new DG.Markers.Common({geoPoint: new DG.GeoPoint(37.456261,55.799279)}, {icon: new DG.Icon('/img/icons/location-pointer.png', new DG.Size(15, 15))});
-    let mark = new DG.Markers.Common({geoPoint: new DG.GeoPoint(37.696725,55.771362)});
-
+    let marker = new DG.Markers.Common({geoPoint: new DG.GeoPoint(37.456261, 55.799279)}, {icon: new DG.Icon('/img/icons/location-pointer.png', new DG.Size(15, 15))});
+    let mark = new DG.Markers.Common({geoPoint: new DG.GeoPoint(37.696725, 55.771362)});
 
 
     myMap.markers.add(marker);
     myMap.markers.add(mark);
 });
 
+function getProducts(page = 1, filter = {}, sort_by = 'id', sort_order = 'ASC') {
+    let limit = 10,
+        offset = (page - 1) * limit;
+
+    sort_by = ['id', 'name', 'price'].includes(sort_by) ? sort_by : 'id';
+    sort_order = sort_order === 'DESC' ? 'DESC' : 'ASC';
+
+    return new Promise((resolve, reject) => {
+        jQuery.ajax({
+            type: 'get',
+            url: '/api/products.php',
+            data: {
+                filter,
+                limit,
+                offset,
+                sort_by,
+                sort_order
+            },
+            success(data) {
+                resolve(data);
+            },
+            error() {
+                reject();
+            }
+        });
+    });
+}
 
 jQuery(function() {
     'use strict';
-    let $body = jQuery('body');
 
+    let $body = jQuery('body');
 
     jQuery('ul.prices_navigation_tabs li a').on('click', function(e) {
         e.preventDefault();
@@ -38,7 +64,7 @@ jQuery(function() {
     });
 
 
-    jQuery('.size_wrapper .size .size_item').on('click', function(e){
+    jQuery('.size_wrapper .size .size_item').on('click', function(e) {
         let $this = jQuery(this);
         jQuery('.size_wrapper .size .size_item.active').removeClass('active');
         $this.addClass('active');
@@ -61,7 +87,7 @@ jQuery(function() {
         nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
     });
 
-    jQuery('.product_page_content .content_list .content_item .product_carousel .carousel_item img').on('click', function(e){
+    jQuery('.product_page_content .content_list .content_item .product_carousel .carousel_item img').on('click', function(e) {
         let $this = jQuery(this);
         jQuery('.product_page_content .content_list .content_item .img_wrapper img').removeClass('active');
         jQuery(`.product_page_content .content_list .content_item .img_wrapper img[src="${$this.attr('src')}"]`).addClass('active');
@@ -88,8 +114,67 @@ jQuery(function() {
 
     jQuery('.funeral_calculator').select2({
         minimumResultsForSearch: Infinity,
-        placeholder: "Не выбрано",
-
+        placeholder: 'Не выбрано'
     });
 
+    (() => {
+        let $productList = jQuery('#product-list');
+
+        if ($productList.length === 0) {
+            return;
+        }
+
+        let page = 1,
+            filter_price_from = null,
+            filter_price_to = null,
+            filter_sizes = [],
+            sort_by = 'id',
+            sort_order = 'ASC';
+
+        function renderCatalogProducts() {
+            let filter = {
+                price_from: filter_price_from,
+                price_to: filter_price_to,
+                sizes: filter_sizes,
+            };
+
+            getProducts(page, filter, sort_by, sort_order).then((products) => {
+                let productHtml = products.map((product) => {
+                    return `<li>
+                    <div class="image-wrapper">
+                        <img src="${product.picture}" alt="">
+                    </div>
+                    <h2>${product.name}</h2>
+                    
+               </li>`;
+                });
+
+                $productList.html(productHtml.join(''));
+            });
+        }
+
+        renderCatalogProducts();
+
+        setTimeout(() => {
+            filter_price_from = 1000;
+            filter_price_to = 5000;
+            filter_sizes = ['100'];
+
+            renderCatalogProducts();
+        }, 5000);
+
+        getProducts(
+            1,
+            {
+                price_from: 1000,
+                price_to: 8000,
+                sizes: ['100', '110']
+            },
+            'price',
+            'DESC'
+        )
+            .then(products => {
+                console.log('Список продуктов на 1-ой странице с фильтрами по ценам от 1000 до 8000 и по размерам "100" и "110"\n', products);
+            });
+    })();
 });
