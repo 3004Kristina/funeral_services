@@ -1,4 +1,5 @@
 <?php require __DIR__ . '/.header.php'; ?>
+
 <!--SECTION MAIN PAGE BANNER START-->
 <section class="main_page_banner_wrapper">
     <div class="main_page_banner_carousel">
@@ -6,15 +7,15 @@
             <img src="/img/mainbanner.png" alt="banner">
             <div class="container">
                 <div class="carousel_content_wrapper">
-                <h1>
-                    Организация похорон в Москве<br>
-                    и Московской области
-                </h1>
-                <p>
-                    Мы проведём похороны так, что они станут воплощением
-                    Вашей любви к близкому человеку. К нам обращаются по
-                    рекомендации, доверяя достойно провести траурные мероприятия.
-                </p>
+                    <h1>
+                        Организация похорон в Москве<br>
+                        и Московской области
+                    </h1>
+                    <p>
+                        Мы проведём похороны так, что они станут воплощением
+                        Вашей любви к близкому человеку. К нам обращаются по
+                        рекомендации, доверяя достойно провести траурные мероприятия.
+                    </p>
                 </div>
             </div>
 
@@ -32,39 +33,39 @@
     <div class="container">
         <div class="main_page_catalog">
             <div class="catalog_item">
-            <a href="#">
-                <img src="/img/images.png" alt="catalog">
-            </a>
-            <p class="title">Гробы</p>
+                <a href="#">
+                    <img src="/img/images.png" alt="catalog">
+                </a>
+                <p class="title">Гробы</p>
             </div>
             <div class="catalog_item">
-            <a href="#">
-                <img src="/img/venki-na-pohorony-2.png" alt="catalog">
-            </a>
+                <a href="#">
+                    <img src="/img/venki-na-pohorony-2.png" alt="catalog">
+                </a>
                 <p class="title">Венки</p>
             </div>
             <div class="catalog_item">
-            <a href="#">
-                <img src="/img/regnum_picture_14735231851935592_normal.png" alt="catalog">
-            </a>
+                <a href="#">
+                    <img src="/img/regnum_picture_14735231851935592_normal.png" alt="catalog">
+                </a>
                 <p class="title">Траурные ленты</p>
             </div>
             <div class="catalog_item">
-            <a href="#">
-                <img src="/img/kr.png" alt="catalog">
-            </a>
+                <a href="#">
+                    <img src="/img/kr.png" alt="catalog">
+                </a>
                 <p class="title">Кресты</p>
             </div>
             <div class="catalog_item">
-            <a href="#">
-                <img src="/img/grob.png" alt="catalog">
-            </a>
+                <a href="#">
+                    <img src="/img/grob.png" alt="catalog">
+                </a>
                 <p class="title">Ритуальный<br> текстиль</p>
             </div>
             <div class="catalog_item">
-            <a href="#">
-                <img src="/img/f_big1.png" alt="catalog">
-            </a>
+                <a href="#">
+                    <img src="/img/f_big1.png" alt="catalog">
+                </a>
                 <p class="title">Аксессуары</p>
             </div>
         </div>
@@ -185,7 +186,7 @@
             <div class="contract_text">
                 <h4>Прижизненный договор</h4>
                 <p>
-                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor.
+                    This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor.
                 </p>
             </div>
             <div class="contract_action">
@@ -208,7 +209,7 @@
                 МСК Ритуал <span class="underline">предоставляет ритуальные услуги, связанные с погребением усопших,
                 комплексный сервис по захоронению и кремированию</span> в Москве и Московской области.
                 <b>Его главная цель – помочь населению, которое столкнулось с трудностями по причине
-                утраты близких.</b> Воспользовавшись услугами этого центра, гражданин получит
+                    утраты близких.</b> Воспользовавшись услугами этого центра, гражданин получит
                 государственные ритуальные услуги – организацию похоронной процедуры. Также
                 ритуальная служба МСК Ритуал грамотно и юридически правильно оформляют документы
                 и «справки о смерти», организовывает отпевание и процессом погребения, решает
@@ -218,7 +219,7 @@
             <div class="license">
                 <img src="/img/license.png" alt="image">
                 <p>
-                    Городская служба «РИТУАЛ»  осуществляет свою деятельность на основании
+                    Городская служба «РИТУАЛ» осуществляет свою деятельность на основании
                     Федерального закона от 12.01.1996 г. №8-ФЗ «О погребении
                     и похоронном деле» ( с изменениями и дополнениями ), Закона г.
                     Москвы от 04.06.1997 г. №11 «О погребении и похоронном деле в

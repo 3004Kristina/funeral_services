@@ -40,7 +40,8 @@ jQuery(function() {
 
     jQuery('.size_wrapper .size .size_item').on('click', function(e){
         let $this = jQuery(this);
-        $this.addClass('active').not($this).removeClass('active');
+        jQuery('.size_wrapper .size .size_item.active').removeClass('active');
+        $this.addClass('active');
     });
 
 
@@ -58,6 +59,12 @@ jQuery(function() {
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-prev slick-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
         nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+    });
+
+    jQuery('.product_page_content .content_list .product_carousel .carousel_item img').on('click', function(e){
+        let $this = jQuery(this);
+        jQuery()
+
     });
 
     jQuery('.qty').each(function() {

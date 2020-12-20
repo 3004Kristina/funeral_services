@@ -3989,8 +3989,9 @@ html, body {
 /*!SECTION PRICES PAGE CONTENT END */
 
 /*! SECTION FUNERAL ORGANIZATION PAGE INFO CONTENT START */
-.funeral_organization_page_info_wrapper{
+.funeral_organization_page_info_wrapper {
     padding-bottom: 46px;
+
     .breadcrumbs {
         list-style: none;
         margin: 0;
@@ -4037,6 +4038,7 @@ html, body {
             }
         }
     }
+
     h2 {
         color: #1b1b1b;
         font-size: 20px;
@@ -4048,16 +4050,16 @@ html, body {
         text-align: left;
     }
 
-    .funeral_organization_page_info{
+    .funeral_organization_page_info {
         display: flex;
         flex-direction: row;
         align-items: stretch;
         margin: 0 -20px;
 
-        .info_item{
+        .info_item {
             margin: 0 20px;
 
-            p{
+            p {
                 margin-top: 0;
                 color: #1a1a1a;
                 font-size: 14px;
@@ -4068,7 +4070,7 @@ html, body {
                 text-align: left;
             }
 
-            .info_list{
+            .info_list {
                 list-style: circle;
                 margin: 0;
                 padding: 0;
@@ -4089,7 +4091,7 @@ html, body {
                 }
             }
 
-            .btn_wrapper{
+            .btn_wrapper {
                 padding: 18px 0 0;
                 display: flex;
                 flex-direction: row;
@@ -4109,7 +4111,7 @@ html, body {
                 }
             }
 
-            img{
+            img {
                 display: block;
                 width: 271px;
                 height: 100%;
@@ -4118,14 +4120,15 @@ html, body {
         }
     }
 
-    @media (max-width: 980px){
-        .funeral_organization_page_info{
+    @media (max-width: 980px) {
+        .funeral_organization_page_info {
             display: block;
             margin: 0;
 
-            .info_item{
+            .info_item {
                 margin: 30px 0;
-                img{
+
+                img {
                     display: block;
                     width: 271px;
                     height: 100%;
@@ -4134,7 +4137,7 @@ html, body {
             }
         }
     }
-    @media (max-width: 780px){
+    @media (max-width: 780px) {
         padding-bottom: 30px;
         .breadcrumbs {
             align-items: center;
@@ -4174,20 +4177,20 @@ html, body {
             line-height: 28px;
             text-align: center;
         }
-        .funeral_organization_page_info{
+        .funeral_organization_page_info {
             display: block;
             margin: 0;
 
-            .info_item{
+            .info_item {
                 margin: 30px 0;
 
-                p{
+                p {
                     margin-top: 0;
                     font-size: 13px;
                     line-height: 22px;
                 }
 
-                .info_list{
+                .info_list {
                     li {
                         margin-left: 18px;
                         margin-bottom: 15px;
@@ -4199,8 +4202,9 @@ html, body {
                     }
                 }
 
-                .btn_wrapper{
+                .btn_wrapper {
                     display: block;
+
                     .btn.grey {
                         margin-left: 0;
                         margin-top: 30px;
@@ -4213,13 +4217,13 @@ html, body {
 /*! SECTION FUNERAL ORGANIZATION PAGE INFO CONTENT END */
 
 /*! SECTION FUNERAL ORGANIZATION PAGE MORGUES LIST START */
-.funeral_organization_page_morgues_list_wrapper{
+.funeral_organization_page_morgues_list_wrapper {
     background-image: url(../img/org-fon.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 50px 0;
 
-    h2{
+    h2 {
         margin: 0 0 20px;
         color: #ffffff;
         font-size: 20px;
@@ -4231,14 +4235,15 @@ html, body {
         text-transform: uppercase;
     }
 
-    table{
+    table {
         border: none;
         border-collapse: collapse;
 
-        thead{
-            tr{
+        thead {
+            tr {
                 border-radius: 5px;
-                th{
+
+                th {
                     padding: 25px 30px;
                     color: #fbfbfb;
                     font-size: 18px;
@@ -4253,9 +4258,9 @@ html, body {
             }
         }
 
-        tbody{
-            tr{
-                td{
+        tbody {
+            tr {
+                td {
                     padding: 25px 30px;
                     color: #1b1b1b;
                     font-size: 15px;
@@ -4266,41 +4271,42 @@ html, body {
                     text-align: left;
                 }
 
-                &:nth-child(odd) td{
+                &:nth-child(odd) td {
                     background: #ffffff;
                 }
 
-                &:nth-child(even) td{
+                &:nth-child(even) td {
                     background: #f3f3f3;
                 }
             }
         }
     }
 
-    @media (max-width: 780px){
+    @media (max-width: 780px) {
         padding: 0 0 20px;
         background-image: none;
-        h2{
+        h2 {
             margin: 0 0 20px;
             font-size: 18px;
             line-height: 28px;
             color: #111111;
         }
 
-        table{
+        table {
             margin-left: -5px;
-            thead{
-                tr{
-                    th{
+
+            thead {
+                tr {
+                    th {
                         padding: 10px;
                         font-size: 12px;
                     }
                 }
             }
 
-            tbody{
-                tr{
-                    td{
+            tbody {
+                tr {
+                    td {
                         padding: 10px;
                         font-size: 12px;
                     }
@@ -4312,9 +4318,10 @@ html, body {
 /*! SECTION FUNERAL ORGANIZATION PAGE MORGUES LIST END */
 
 /*! SECTION FUNERAL ORGANIZATION PAGE MAP START */
-.funeral_organization_page_map_wrapper{
+.funeral_organization_page_map_wrapper {
     padding-top: 60px;
-    h2{
+
+    h2 {
         margin: 0 0 33px;
         color: #1b1b1b;
         font-size: 20px;
@@ -4326,22 +4333,22 @@ html, body {
         text-transform: uppercase;
     }
 
-    .map{
+    .map {
         height: 571px;
     }
 
-    @media (max-width: 1260px){
-        .map{
+    @media (max-width: 1260px) {
+        .map {
             height: 500px;
         }
     }
-    @media (max-width: 780px){
+    @media (max-width: 780px) {
         padding-top: 30px;
-        h2{
+        h2 {
             font-size: 18px;
             margin: 0 0 25px;
         }
-        .map{
+        .map {
             height: 300px;
         }
     }
@@ -4426,7 +4433,7 @@ html, body {
         }
     }
 
-    @media (max-width: 1260px){
+    @media (max-width: 1260px) {
         .funeral_organization_page_location {
             .prices_navigation_tabs {
 
@@ -4439,7 +4446,7 @@ html, body {
             }
         }
     }
-    @media (max-width: 780px){
+    @media (max-width: 780px) {
         .funeral_organization_page_location {
             padding: 40px 0;
 
@@ -4501,9 +4508,9 @@ html, body {
         text-align: left;
     }
 
-    @media (max-width: 780px){
+    @media (max-width: 780px) {
         padding: 40px 0;
-        h2{
+        h2 {
             margin: 0 0 20px;
             font-size: 18px;
         }
@@ -4548,7 +4555,7 @@ html, body {
                 margin-bottom: 20px;
             }
 
-            h2{
+            h2 {
                 margin: 0;
                 color: #000000;
                 font-size: 18px;
@@ -4638,7 +4645,7 @@ html, body {
                     margin-bottom: 20px;
                 }
 
-                h2{
+                h2 {
                     font-size: 16px;
                 }
             }
@@ -4816,7 +4823,7 @@ html, body {
                 }
             }
 
-            h2{
+            h2 {
                 margin: 35px 5px 28px;
                 color: #1b1b1b;
                 font-size: 15px;
@@ -4978,10 +4985,10 @@ html, body {
 /*! SECTION SERVICE PAGE PRICE END */
 
 /*! SECTION SERVICE PAGE TEXT CONTENT START */
-.service_page_text_wrapper{
+.service_page_text_wrapper {
     padding: 55px 0;
 
-    h2{
+    h2 {
         margin: 0;
         color: #1b1b1b;
         font-size: 20px;
@@ -4993,7 +5000,7 @@ html, body {
         text-transform: uppercase;
     }
 
-    p{
+    p {
         color: #1a1a1a;
         font-size: 14px;
         font-weight: 400;
@@ -5002,20 +5009,20 @@ html, body {
         line-height: 25.4px;
         text-align: left;
 
-        .underline{
+        .underline {
             text-decoration: underline;
         }
     }
 
-    @media (max-width: 980px){
+    @media (max-width: 980px) {
         padding: 40px 0;
-        h2{
+        h2 {
             margin: 0;
             font-size: 18px;
             line-height: 28px;
         }
 
-        p{
+        p {
             font-size: 13px;
             line-height: 22px;
         }
@@ -5098,7 +5105,7 @@ html, body {
                 text-align: left;
                 text-transform: uppercase;
 
-                &:hover{
+                &:hover {
                     box-shadow: 0 0 15px #8b8a8a;
                 }
             }
@@ -5213,7 +5220,7 @@ html, body {
             padding: 50px;
 
             .tab {
-                p{
+                p {
                     color: #1b1b1b;
                     font-size: 15px;
                     font-weight: 400;
@@ -5226,7 +5233,7 @@ html, body {
         }
     }
 
-    @media (max-width: 1260px){
+    @media (max-width: 1260px) {
         .product_page_description {
             .prices_navigation_tabs {
 
@@ -5239,7 +5246,7 @@ html, body {
             }
         }
     }
-    @media (max-width: 780px){
+    @media (max-width: 780px) {
         .product_page_description {
             padding: 40px 0;
 
@@ -5261,7 +5268,7 @@ html, body {
 /*! SECTION PRODUCT PAGE DESCRIPTION END */
 
 /*! SECTION PRODUCT PAGE CONTENT START */
-.product_page_content_wrapper{
+.product_page_content_wrapper {
     .breadcrumbs {
         list-style: none;
         margin: 0;
@@ -5320,69 +5327,138 @@ html, body {
         text-align: center;
     }
 
-    .product_page_content{
-        background-color: #f8f8f8;
+    .product_page_content {
+        --background-color: #f8f8f8;
+
+        background-color: var(--background-color);
         border-top: 1px solid #d7d7d7;
         border-bottom: 1px solid #d7d7d7;
         padding: 55px 0 45px;
 
-        .content_list{
-            display: flex;
-            flex-direction: row;
-            margin: 0 -35px;
+        .content_list {
+            display: grid;
+            grid-template-columns: 410px auto;
+            grid-gap: 70px;
+            width: 100%;
 
-            .content_item{
-                margin: 0 35px;
-
-                .img_wrapper{
+            .content_item {
+                .img_wrapper {
                     box-shadow: inset 0 0 16px rgba(0, 2, 4, 0.13);
                     background-color: #efefef;
-                    width: 431px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    //display: flex;
+                    //align-items: center;
+                    //justify-content: center;
+                    margin: 0 0 25px;
                     padding: 26px 0;
+                    position: relative;
 
-                    img{
+                    img {
                         display: block;
-                        width: 267px;
-                        height: 404px;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+
+                        &.active{
+                            opacity: 1;
+                        }
 
                     }
                 }
 
-                .product_carousel{
-                    display: flex;
-                    flex-direction: row;
-                    margin-top: 25px;
-                    width: 431px;
+                .product_carousel {
+                    --range-between-slides: 9px;
 
-                    .carousel_item{
-                        margin: 0 9px;
+                    transition: opacity 0.2s;
+                    margin: 0 calc(-1 * var(--range-between-slides));
+                    opacity: 1;
+
+                    &:not(.slick-initialized) {
+                        height: 120px;
+                        opacity: 0;
+                    }
+
+                    .slick-list {
+                        position: relative;
+                        z-index: 1;
+
+                        &:before, &:after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            width: var(--range-between-slides);
+                            height: 100%;
+                            background: var(--background-color);
+                            z-index: 1;
+                        }
+
+                        &:before {
+                            left: 0;
+                        }
+
+                        &:after {
+                            right: 0;
+                        }
+
+                    }
+
+                    .carousel_item {
+                        margin: 0 var(--range-between-slides);
                         box-shadow: inset 0 0 16px rgba(0, 2, 4, 0.13);
                         background-color: #efefef;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        padding: 10px 30px;
+                        padding: 10px;
+                        outline: none;
 
-
-                        img{
+                        img {
                             display: block;
                             width: 66px;
                             height: 99px;
                         }
                     }
+
+                    .slick-arrow {
+                        background-color: #9b062d;
+                        width: 28px;
+                        height: 56px;
+                        border: none;
+                        padding: 0;
+                        display: block;
+                        position: absolute;
+                        top: calc(50% - 28px);
+                        outline: none;
+                        z-index: 2;
+
+                        &.slick-next {
+                            left: calc(100% - var(--range-between-slides));
+                            border-radius: 0 28px 28px 0;
+                        }
+
+                        &.slick-prev {
+                            right: calc(100% - var(--range-between-slides));
+                            border-radius: 28px 0 0 28px;
+                        }
+
+                        .fa {
+                            color: #ffffff;
+                        }
+                    }
                 }
 
-                .code_availability_wrapper{
+                .code_availability_wrapper {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
 
-                    .code{
+                    .code {
                         margin-right: 25px;
-                        p{
+
+                        p {
                             color: #000000;
                             font-size: 18px;
                             font-weight: 600;
@@ -5390,13 +5466,13 @@ html, body {
                             letter-spacing: normal;
                             line-height: normal;
 
-                            .code_number{
+                            .code_number {
                                 font-weight: 400;
                             }
                         }
                     }
 
-                    .availability{
+                    .availability {
                         border: 1px solid #9b062d;
                         border-radius: 5px;
                         color: #9b062d;
@@ -5446,7 +5522,7 @@ html, body {
                     }
                 }
 
-                .descr{
+                .descr {
                     color: #1b1b1b;
                     font-size: 15px;
                     font-weight: 400;
@@ -5456,8 +5532,8 @@ html, body {
                     text-align: left;
                 }
 
-                .size_wrapper{
-                    h6{
+                .size_wrapper {
+                    h6 {
                         margin: 0;
                         color: #1b1b1b;
                         font-size: 15px;
@@ -5468,14 +5544,14 @@ html, body {
                         text-align: left;
                     }
 
-                    .size{
+                    .size {
                         display: flex;
                         flex-direction: row;
                         justify-content: flex-start;
                         align-items: center;
                         margin: 10px -3px;
 
-                        .size_item{
+                        .size_item {
                             background-color: #e7e7e7;
                             border-radius: 5px;
                             padding: 14px 20px;
@@ -5487,7 +5563,7 @@ html, body {
                             line-height: normal;
                             margin: 0 3px;
 
-                            &.active{
+                            &.active {
                                 background: #9b062d;
                                 color: #ffffff;
                             }
@@ -5495,7 +5571,7 @@ html, body {
                     }
                 }
 
-                .qty_wrapper{
+                .qty_wrapper {
                     display: flex;
                     flex-direction: row;
                     margin-top: 35px;
@@ -5554,7 +5630,7 @@ html, body {
                         }
                     }
 
-                    .btn_wrapper{
+                    .btn_wrapper {
                         display: flex;
                         flex-direction: row;
                         margin-left: 65px;
@@ -5576,6 +5652,10 @@ html, body {
 
             }
         }
+    }
+
+    @media (max-width: 980px) {
+
     }
 }
 /*! SECTION PRODUCT PAGE CONTENT END */
@@ -6008,4 +6088,50 @@ html, body {
 }
 /*! FOOTER END */
 
+.glitch {
+    position: relative;
 
+    &:before,
+    &:after {
+        content: attr(data-text);
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        overflow: hidden;
+        clip: rect(0, auto, 0, 0);
+    }
+
+    &:before {
+        left: -2px;
+        text-shadow: -1px 0 rgb(255, 0, 0);
+        animation: noise-anim 2s infinite linear alternate-reverse;
+    }
+
+    &:after {
+        right: -2px;
+        text-shadow: 1px 0 rgb(0, 0, 255);
+        animation: noise-anim-2 2s infinite linear alternate-reverse;
+    }
+}
+
+@keyframes noise-anim {
+    $steps: 20;
+
+    @for $i from 0 through $steps {
+        #{percentage($i * (1 / $steps))} {
+            clip: rect(random(100) + px, auto, random(100) + px, 0);
+        }
+    }
+}
+
+@keyframes noise-anim-2 {
+    $steps: 20;
+
+    @for $i from 0 through $steps {
+        #{percentage($i * (1 / $steps))} {
+            clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+        }
+    }
+}

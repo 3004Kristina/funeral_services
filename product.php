@@ -14,23 +14,27 @@
             <div class="content_list">
                 <div class="content_item">
                     <div class="img_wrapper">
-                        <img src="/img/product.png" alt="product">
+                        <img src="/img/product.png" alt="product" class="active">
+                        <img src="/img/otpevanie.jpg" alt="product">
+                        <img src="/img/35311_604_420_1.jpg" alt="product">
+                        <img src="/img/venki-na-pohorony-2.png" alt="product">
+                        <img src="/img/pic_103-840x510-crop.jpg" alt="product">
                     </div>
                     <div class="product_carousel">
                         <div class="carousel_item">
-                            <img src="/img/product.png" alt="banner">
+                            <img src="/img/product.png" alt="product">
                         </div>
                         <div class="carousel_item">
-                            <img src="/img/product.png" alt="banner">
+                            <img src="/img/otpevanie.jpg" alt="product">
                         </div>
                         <div class="carousel_item">
-                            <img src="/img/product.png" alt="banner">
+                            <img src="/img/35311_604_420_1.jpg" alt="product">
                         </div>
                         <div class="carousel_item">
-                            <img src="/img/product.png" alt="banner">
+                            <img src="/img/venki-na-pohorony-2.png" alt="product">
                         </div>
                         <div class="carousel_item">
-                            <img src="/img/product.png" alt="banner">
+                            <img src="/img/pic_103-840x510-crop.jpg" alt="product">
                         </div>
                     </div>
                 </div>
