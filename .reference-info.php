@@ -7,12 +7,12 @@
                 <div class="reference_info_list">
                     <div class="reference_info_item">
                         <img src="/img/icons/morgue.svg" alt="icon">
-                        <a href="#">МОРГИ</a>
+                        <a href="/morgues.php">МОРГИ</a>
                     </div>
 
                     <div class="reference_info_item">
                         <img src="/img/icons/cemetery.svg" alt="icon">
-                        <a href="#">Кладбища</a>
+                        <a href="/cemeteries.php">Кладбища</a>
                     </div>
 
                     <div class="reference_info_item">

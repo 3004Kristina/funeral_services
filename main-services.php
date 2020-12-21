@@ -302,7 +302,7 @@
             </div>
         </div>
             <div class="contract_content">
-                <a href="#" class = "contract_item">
+                <a href="/calculator.php" class = "contract_item">
                     <div class="image_wrapper">
                         <img src="/img/icons/calculator.png" alt="icon">
                     </div>

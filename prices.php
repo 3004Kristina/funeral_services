@@ -149,7 +149,7 @@
                     </a>
                 </div>
             </div>
-            <button class="btn">Рассчитать стоимость похорон</button>
+            <a href="/calculator.php" class="btn">Рассчитать стоимость похорон</a>
         </div>
     </div>
 

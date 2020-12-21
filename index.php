@@ -119,7 +119,7 @@
 
             <div class="prices_content_tabs">
                 <div class="tab" id="tab1">
-                    <a href="#" class="tab_item">
+                    <a href="/product.php" class="tab_item">
                         <img src="/img/product.png" alt="product">
                         <h4>Венок 1,2 метра</h4>
                         <p class="descr">
@@ -131,7 +131,7 @@
                         </p>
                         <button class="btn">Узнать подробнее</button>
                     </a>
-                    <a href="#" class="tab_item">
+                    <a href="/product.php" class="tab_item">
                         <img src="/img/product.png" alt="product">
                         <h4>Венок 1,2 метра</h4>
                         <p class="descr">
@@ -143,7 +143,7 @@
                         </p>
                         <button class="btn">Узнать подробнее</button>
                     </a>
-                    <a href="#" class="tab_item">
+                    <a href="/product.php" class="tab_item">
                         <img src="/img/product.png" alt="product">
                         <h4>Венок 1,2 метра</h4>
                         <p class="descr">
@@ -158,7 +158,7 @@
                         </p>
                         <button class="btn">Узнать подробнее</button>
                     </a>
-                    <a href="#" class="tab_item">
+                    <a href="/product.php" class="tab_item">
                         <img src="/img/product.png" alt="product">
                         <h4>Венок 1,2 метра</h4>
                         <p class="descr">

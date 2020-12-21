@@ -65,8 +65,7 @@
                         </a>
                     </div>
                 </div>
-
-        </div>
+            </div>
         </div>
     </div>
 
@@ -74,16 +73,25 @@
     <div class="main_menu_search_wrapper">
         <div class="container">
             <div class="main_menu_search_block">
+                <div class="mobile_menu_bg"></div>
                 <!--MAIN MENU START-->
-                <div class="main_menu_block">
-                    <ul class="main_menu">
-                        <li><a href="#" class="active">Главная</a></li>
-                        <li><a href="#">Каталог товаров</a></li>
-                        <li><a href="#">Как купить</a></li>
-                        <li><a href="#">Ритуальные услуги</a></li>
-                        <li><a href="#">О компании</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
+                <div class="main_menu_wrapper">
+                    <a href="#" class="mobile_menu_btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                    <div class="main_menu_block">
+                        <ul class="main_menu">
+                            <li><a href="/" class="active">Главная</a></li>
+                            <li><a href="/catalog.php">Каталог товаров</a></li>
+                            <li><a href="/service.php">Как купить</a></li>
+                            <li><a href="/main-services.php">Ритуальные услуги</a></li>
+                            <li><a href="/funeral-organization.php">О компании</a></li>
+                            <li><a href="/contacts.php">Контакты</a></li>
+                            <li><a href="/prices.php">Цены</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <!--MAIN MENU END-->
                 <div class="search_block">

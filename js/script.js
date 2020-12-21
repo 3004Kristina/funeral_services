@@ -15,7 +15,7 @@ DG.autoload(function() {
 });
 
 function getProducts(page = 1, filter = {}, sort_by = 'id', sort_order = 'ASC') {
-    let limit = 10,
+    let limit = 9,
         offset = (page - 1) * limit;
 
     sort_by = ['id', 'name', 'price'].includes(sort_by) ? sort_by : 'id';
@@ -46,6 +46,17 @@ jQuery(function() {
     'use strict';
 
     let $body = jQuery('body');
+
+    // MOBILE MENU START
+    jQuery('.mobile_menu_btn').on('click', function(e) {
+        e.preventDefault();
+        $body.toggleClass('mobile-menu-opened');
+    });
+
+    jQuery('.mobile_menu_bg').on('click', function() {
+        $body.removeClass('mobile-menu-opened');
+    });
+    // MOBILE MENU END
 
     jQuery('ul.prices_navigation_tabs li a').on('click', function(e) {
         e.preventDefault();
@@ -135,17 +146,52 @@ jQuery(function() {
             let filter = {
                 price_from: filter_price_from,
                 price_to: filter_price_to,
-                sizes: filter_sizes,
+                sizes: filter_sizes
             };
 
             getProducts(page, filter, sort_by, sort_order).then((products) => {
                 let productHtml = products.map((product) => {
                     return `<li>
+                    <a href="/product.php">
                     <div class="image-wrapper">
                         <img src="${product.picture}" alt="">
                     </div>
                     <h2>${product.name}</h2>
-                    
+                    <div class="descr">Lorem ipsum dolor sit amet.</div>
+                    <div class="price">
+                        ${product.price} <i class="fa fa-rub" aria-hidden="true"></i>
+                    </div>
+                    <div class="invisibly">
+                    <div class="size_wrapper">
+                        <h6>Высота, см.</h6>
+                        <div class="size">
+                            <div class="size_item">
+                                ${product.sizes[0]}
+                            </div>
+                            <div class="size_item active">
+                               ${product.sizes[1]}
+                            </div>
+                            <div class="size_item">
+                                ${product.sizes[2]}
+                            </div>
+                            <div class="size_item">
+                                ${product.sizes[3]}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qty_wrapper">
+                        <div class="qty">
+                            <input type="number" value="1" step="1" min="1">
+                            <button class="up"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            <button class="down"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                        </div>
+
+                        <div class="btn_wrapper">
+                            <button class="btn">В корзину</button>
+                        </div>
+                    </div>
+                    </div>
+                    </a>
                </li>`;
                 });
 
@@ -155,13 +201,13 @@ jQuery(function() {
 
         renderCatalogProducts();
 
-        setTimeout(() => {
-            filter_price_from = 1000;
-            filter_price_to = 5000;
-            filter_sizes = ['100'];
-
-            renderCatalogProducts();
-        }, 5000);
+        // setTimeout(() => {
+        //     filter_price_from = 1000;
+        //     filter_price_to = 5000;
+        //     filter_sizes = ['100'];
+        //
+        //     renderCatalogProducts();
+        // }, 5000);
 
         getProducts(
             1,
