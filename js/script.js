@@ -208,19 +208,43 @@ jQuery(function() {
     })();
 });
 
-var nonLinearStepSlider = document.getElementById('slider-non-linear-step');
+let nonLinearStepSlider = document.getElementById('slider-non-linear-step');
+let filterPriceFrom = document.getElementById('filter-price-from');
+let filterPriceTo = document.getElementById('filter-price-to');
+
+let filterPriceFromHidden = document.querySelector('[name="filter[price_from]"]');
+let filterPriceToHidden = document.querySelector('[name="filter[price_to]"]');
 
 noUiSlider.create(nonLinearStepSlider, {
-    start: [100, 10000],
+    start: [filterPriceFromHidden.value, filterPriceToHidden.value],
+    step: 100,
+    connect: true,
+    format: wNumb({
+        decimals: 0,
+        thousand: ' ',
+        suffix: 'p'
+    }),
     range: {
         'min': [0],
-        '10%': [500, 500],
-        '50%': [3000, 1000],
         'max': [50000]
     }
 });
 
-nonLinearStepSlider.noUiSlider.on('update', function (values) {
-    jQuery('input[name="filter[price_from]"]').val(values[0]);
-    jQuery('input[name="filter[price_to]"]').val(values[1]);
+
+
+nonLinearStepSlider.noUiSlider.on('update', function (values, handle, numbers) {
+    console.log(numbers);
+    filterPriceFrom.value = values[0];
+    filterPriceTo.value = values[1];
+    filterPriceFromHidden.value =  numbers[0].toFixed(0);
+    filterPriceToHidden.value =  numbers[1].toFixed(0);
 });
+
+filterPriceFrom.addEventListener('change', function () {
+    nonLinearStepSlider.noUiSlider.set(this.value);
+});
+
+filterPriceTo.addEventListener('change', function () {
+    nonLinearStepSlider.noUiSlider.set(this.value);
+});
+

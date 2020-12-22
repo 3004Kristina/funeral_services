@@ -39,14 +39,21 @@ $filterSizes = [
 
                             <h4>Стоимость</h4>
                             <div class="form_group_rage">
+                                <label for="filter-price-from">
+                                    <input type="hidden"  name="filter[price_from]" value="<?= isset($_GET['filter']['price_from']) ? $_GET['filter']['price_from'] : '0'; ?>">
+                                    <input type="text"
+                                           id="filter-price-from"
+                                           value="<?= isset($_GET['filter']['price_from']) ? $_GET['filter']['price_from'] : ''; ?>">
+                                </label>
 
-                                <input type="text"
-                                       name="filter[price_from]"
-                                       value="<?= isset($_GET['filter']['price_from']) ? $_GET['filter']['price_from'] : ''; ?>">
                                 <span>-</span>
-                                <input type="text"
-                                       name="filter[price_to]"
-                                       value="<?= isset($_GET['filter']['price_to']) ? $_GET['filter']['price_to'] : ''; ?>">
+                                <label for="filter-price-to">
+                                    <input type="hidden"  name="filter[price_to]" value="<?= isset($_GET['filter']['price_to']) ? $_GET['filter']['price_to'] : '50000'; ?>">
+                                    <input type="text"
+                                           id="filter-price-to"
+                                           value="<?= isset($_GET['filter']['price_to']) ? $_GET['filter']['price_to'] : ''; ?>">
+                                </label>
+
                             </div>
 
                             <div id="slider-non-linear-step"></div>

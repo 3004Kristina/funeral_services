@@ -91,7 +91,7 @@ function generateDescription($name)
 
 function generatePrice()
 {
-    return \mt_rand(250, 2000) * 10;
+    return \mt_rand(250, 5000) * 10;
 }
 
 function generatePicture()
