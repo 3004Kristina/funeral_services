@@ -1,15 +1,11 @@
 function getProducts(page = 1, filter = {}, sort = 'id') {
-    let limit = 12,
-        offset = (page - 1) * limit;
-
     return new Promise((resolve, reject) => {
         jQuery.ajax({
             type: 'get',
             url: '/api/products.php',
             data: {
                 filter,
-                limit,
-                offset,
+                page,
                 sort
             },
             success(data) {
@@ -115,16 +111,18 @@ jQuery(function() {
 
     // Catalog page
     (() => {
-        let $productList = jQuery('#product-list'),
+        let $catalogProducts = jQuery('#catalog-products'),
+            $catalogPaginator = jQuery('#catalog-paginator'),
             $filterForm = jQuery('#filter-form'),
             $sortInput = jQuery('select[name="sort"]');
 
-        if ($productList.length === 0) {
+        if ($catalogProducts.length === 0) {
             return;
         }
 
         let query = Qs.parse(location.search ? location.search.slice(1) : ''),
             page = query.page || 1,
+            page_count = 1,
             filter_price_from = query?.filter?.price_from || null,
             filter_price_to = query?.filter?.price_to || null,
             filter_sizes = query?.filter?.sizes || [],
@@ -141,13 +139,15 @@ jQuery(function() {
                 sizes: filter_sizes
             };
 
-            getProducts(page, filter, sort).then((products) => {
-                let productHtml = products.map((product) => {
-                    let sizeElements = product.sizes.map((size, index) => {
-                        return `<div class="size_item ${index === 0 ? 'active' : ''}">${size}</div>`;
-                    });
+            getProducts(page, filter, sort).then((response) => {
+                page_count = response.page_count;
 
-                    return `<li>
+                let productsHtml = response.items.map((product) => {
+                        let sizeElements = product.sizes.map((size, index) => {
+                            return `<div class="size_item ${index === 0 ? 'active' : ''}">${size}</div>`;
+                        });
+
+                        return `<li>
                     <a href="/product.php" class="image-wrapper">
                         <img src="${product.picture}" alt="">
                     </a>
@@ -174,9 +174,17 @@ jQuery(function() {
                     </div>
                     </div>
                </li>`;
-                });
+                    }),
+                    paginatorHtml = [];
 
-                $productList.html(productHtml.join(''));
+                for (let i = 1; i <= page_count; ++i) {
+                    let queryString = `?page=${i}&${$filterForm.serialize()}`;
+
+                    paginatorHtml.push(`<li class="${i === page ? 'active' : ''}"><a href="${queryString}">${i}</a></li>`);
+                }
+
+                $catalogProducts.html(productsHtml.join(''));
+                $catalogPaginator.html(paginatorHtml.join(''));
             });
         }
 
@@ -231,20 +239,18 @@ noUiSlider.create(nonLinearStepSlider, {
 });
 
 
-
-nonLinearStepSlider.noUiSlider.on('update', function (values, handle, numbers) {
-    console.log(numbers);
+nonLinearStepSlider.noUiSlider.on('update', function(values, handle, numbers) {
     filterPriceFrom.value = values[0];
     filterPriceTo.value = values[1];
-    filterPriceFromHidden.value =  numbers[0].toFixed(0);
-    filterPriceToHidden.value =  numbers[1].toFixed(0);
+    filterPriceFromHidden.value = numbers[0].toFixed(0);
+    filterPriceToHidden.value = numbers[1].toFixed(0);
 });
 
-filterPriceFrom.addEventListener('change', function () {
+filterPriceFrom.addEventListener('change', function() {
     nonLinearStepSlider.noUiSlider.set(this.value);
 });
 
-filterPriceTo.addEventListener('change', function () {
+filterPriceTo.addEventListener('change', function() {
     nonLinearStepSlider.noUiSlider.set(this.value);
 });
 

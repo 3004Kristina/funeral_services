@@ -13,8 +13,10 @@ $database = new Medoo([
 $sort = isset($_GET['sort']) ? $_GET['sort'] : 'id';
 $sortBy = \trim($sort, '-');
 $sortOrder = \strpos($sort, '-') === 0 ? 'DESC' : 'ASC';
-$offset = isset($_GET['offset']) ? $_GET['offset'] : 0;
-$limit = isset($_GET['limit']) ? $_GET['limit'] : 10;
+
+$page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+$limit = 12;
+$offset = $limit * ($page - 1);
 
 $where = [
     'ORDER' => [$sortBy => $sortOrder],
@@ -37,18 +39,7 @@ if (isset($_GET['filter']['sizes']) && \is_array($_GET['filter']['sizes'])) {
     }
 }
 
-$products = $database->select('products', [
-    'id',
-    'name',
-    'description',
-    'price',
-    'picture',
-    'sizes',
-], $where);
-
-\header('Content-Type: application/json; charset=UTF-8');
-
-echo \json_encode(\array_map(static function ($product) {
+$items = \array_map(static function ($product) {
     return [
         'id' => (int) $product['id'],
         'name' => $product['name'],
@@ -57,4 +48,19 @@ echo \json_encode(\array_map(static function ($product) {
         'picture' => $product['picture'],
         'sizes' => \json_decode($product['sizes']),
     ];
-}, $products));
+}, $database->select('products', ['id', 'name', 'description', 'price', 'picture', 'sizes'], $where));
+
+$totalWhere = $where;
+
+unset($totalWhere['ORDER'], $totalWhere['LIMIT']);
+
+$total = $database->count('products', $totalWhere);
+
+\header('Content-Type: application/json; charset=UTF-8');
+
+echo \json_encode([
+    'items' => $items,
+    'total' => $total,
+    'page' => $page,
+    'page_count' => \ceil($total / $limit),
+]);

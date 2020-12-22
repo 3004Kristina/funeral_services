@@ -88,13 +88,14 @@ $filterSizes = [
             <div class="content_item">
                 <select name="sort" form="filter-form">
                     <option value="">Сортировать по ...</option>
-                    <option value="price" <?= $_GET['sort'] === 'price' ? 'selected' : ''; ?>>Цена, от меньшего к большему</option>
-                    <option value="-price" <?= $_GET['sort'] === '-price' ? 'selected' : ''; ?>>Цена, от большему к меньшего</option>
-                    <option value="name" <?= $_GET['sort'] === 'name' ? 'selected' : ''; ?>>По алфавиту, от А до Я</option>
-                    <option value="-name" <?= $_GET['sort'] === '-name' ? 'selected' : ''; ?>>По алфавиту, от Я до А</option>
+                    <option value="price" <?= (isset($_GET['sort']) ? $_GET['sort'] : null) === 'price' ? 'selected' : ''; ?>>Цена, от меньшего к большему</option>
+                    <option value="-price" <?= (isset($_GET['sort']) ? $_GET['sort'] : null) === '-price' ? 'selected' : ''; ?>>Цена, от большему к меньшего</option>
+                    <option value="name" <?= (isset($_GET['sort']) ? $_GET['sort'] : null) === 'name' ? 'selected' : ''; ?>>По алфавиту, от А до Я</option>
+                    <option value="-name" <?= (isset($_GET['sort']) ? $_GET['sort'] : null) === '-name' ? 'selected' : ''; ?>>По алфавиту, от Я до А</option>
                 </select>
 
-                <ul id="product-list"></ul>
+                <ul id="catalog-products"></ul>
+                <ul id="catalog-paginator"></ul>
             </div>
 
         </div>
