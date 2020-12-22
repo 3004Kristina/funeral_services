@@ -36,17 +36,20 @@ $filterSizes = [
                 <div class="form_wrapper">
                     <form action="" method="get" id="filter-form">
                         <div class="forma">
+
                             <h4>Стоимость</h4>
                             <div class="form_group_rage">
+
                                 <input type="text"
                                        name="filter[price_from]"
                                        value="<?= isset($_GET['filter']['price_from']) ? $_GET['filter']['price_from'] : ''; ?>">
+                                <span>-</span>
                                 <input type="text"
                                        name="filter[price_to]"
                                        value="<?= isset($_GET['filter']['price_to']) ? $_GET['filter']['price_to'] : ''; ?>">
                             </div>
 
-                            <input type="range">
+                            <div id="slider-non-linear-step"></div>
 
                             <h4>Высота</h4>
 

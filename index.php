@@ -22,7 +22,6 @@
         </div>
         <div class="carousel_item">
             <img src="/img/mainbanner.png" alt="banner">
-
         </div>
     </div>
 </section>

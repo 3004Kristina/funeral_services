@@ -130,8 +130,6 @@ jQuery(function() {
             filter_sizes = query?.filter?.sizes || [],
             sort = query.sort || 'id';
 
-        console.log(query);
-
         $sortInput.on('change', function(e) {
             $filterForm.trigger('submit');
         });
@@ -201,11 +199,28 @@ jQuery(function() {
             myMap.setCenter(new DG.GeoPoint(37.609218, 55.753559), 11);
             myMap.controls.add(new DG.Controls.Zoom());
 
-            let marker = new DG.Markers.Common({geoPoint: new DG.GeoPoint(37.456261, 55.799279)}, {icon: new DG.Icon('/img/icons/location-pointer.png', new DG.Size(15, 15))});
+            let marker = new DG.Markers.Common({geoPoint: new DG.GeoPoint(37.456261, 55.799279)});
             let mark = new DG.Markers.Common({geoPoint: new DG.GeoPoint(37.696725, 55.771362)});
 
             myMap.markers.add(marker);
             myMap.markers.add(mark);
         });
     })();
+});
+
+var nonLinearStepSlider = document.getElementById('slider-non-linear-step');
+
+noUiSlider.create(nonLinearStepSlider, {
+    start: [100, 10000],
+    range: {
+        'min': [0],
+        '10%': [500, 500],
+        '50%': [3000, 1000],
+        'max': [50000]
+    }
+});
+
+nonLinearStepSlider.noUiSlider.on('update', function (values) {
+    jQuery('input[name="filter[price_from]"]').val(values[0]);
+    jQuery('input[name="filter[price_to]"]').val(values[1]);
 });

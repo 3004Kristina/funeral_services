@@ -6555,6 +6555,68 @@ html, body {
                         margin: 0 0 10px;
                     }
 
+                    .form_group_rage{
+                        display: flex;
+                        flex-direction: row;
+                        margin: 0 -10px;
+                        
+                        input{
+                            display: block;
+                            border: none;
+                            background:  #e9e7e7;
+                            border-radius: 5px;
+                            padding: 15px 0;
+                            margin: 0 10px;
+                            width: calc(100%/2 - 20px);
+                            text-align: center;
+                            color: #1b1b1b;
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 15px;
+                            font-weight: 500;
+                            font-style: normal;
+                            letter-spacing: normal;
+                        }
+
+                        span{
+                            line-height: 44px;
+                        }
+                    }
+
+                    #slider-non-linear-step{
+                        margin: 25px 0 40px;
+
+                        &.noUi-target{
+                            background: #e9e7e7;
+                            border-radius: 4px;
+                            border: none;
+                            box-shadow: none;
+                        }
+
+                        &.noUi-horizontal{
+                            height: 3px;
+
+                        }
+
+                            .noUi-handle{
+                                border: none;
+                                border-radius: 50%;
+                                background: #9b062d;
+                                cursor: default;
+                                box-shadow: none;
+                                width: 14px;
+                                height: 14px;
+                                outline: none;
+
+                                &:before{
+                                    display: none;
+                                }
+                                &:after{
+                                    display: none;
+                                }
+                            }
+
+                    }
+
                     .form_group_checkbox {
                         margin-bottom: 8px;
                         position: relative;
@@ -6650,7 +6712,7 @@ html, body {
                     align-items: center;
                     text-decoration: none;
                     box-shadow: 0 0 18px rgba(0, 2, 4, 0.12);
-                    padding: 20px 0;
+                    padding: 15px 10px;
                     height: 100%;
                     position: relative;
 
@@ -6659,15 +6721,16 @@ html, body {
 
                         img {
                             display: block;
+                            object-fit: contain;
                             width: 170px;
-                            height: 254px;
+                            height: 225px;
                         }
                     }
 
                     h2 {
-                        margin: 20px 0 10px;
+                        margin: 10px 0 10px;
                         color: #474747;
-                        font-size: 17px;
+                        font-size: 15px;
                         font-weight: 700;
                         font-style: normal;
                         letter-spacing: normal;
@@ -6684,6 +6747,7 @@ html, body {
                         font-style: normal;
                         letter-spacing: normal;
                         line-height: 19.17px;
+                        text-align: center;
                     }
 
                     .price {
@@ -6707,7 +6771,7 @@ html, body {
                         opacity: 0;
                         pointer-events: none;
                         position: absolute;
-                        top: calc(100% - 35px);
+                        top: calc(100% - 20px);
                         z-index: 5;
                         background: #ffffff;
                         width: 100%;
@@ -6762,7 +6826,7 @@ html, body {
 
                             .qty {
                                 position: relative;
-                                margin-left: 50px;
+                                margin-left: 40px;
 
                                 input[type='number'] {
                                     padding: 17px 10px;
@@ -6776,7 +6840,7 @@ html, body {
                                     text-align: center;
                                     border: 1px solid #ffffff;
                                     background: #ffffff;
-                                    width: 70px;
+                                    width: 50px;
 
                                     &::-webkit-inner-spin-button,
                                     &::-webkit-outer-spin-button {
@@ -6790,7 +6854,7 @@ html, body {
                                     background: #e7e7e7;
                                     position: absolute;
                                     top: 0;
-                                    padding: 1px 13px;
+                                    padding: 1px 10px;
                                     outline: none;
                                     height: 100%;
 
@@ -6808,14 +6872,14 @@ html, body {
 
                                     .fa {
                                         color: #414141;
-                                        font-size: 16px;
+                                        font-size: 14px;
                                         text-align: center;
                                     }
                                 }
                             }
 
                             .btn_wrapper {
-                                margin-right: 20px;
+                                margin-right: 10px;
 
                                 .btn {
                                     font-size: 13px;
@@ -6834,6 +6898,155 @@ html, body {
                         }
                     }
 
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1260px){
+        .catalog_page_content {
+            .content_item {
+                #product-list {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(6, 1fr);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 980px){
+        .catalog_page_content {
+
+            display: block;
+            flex-direction: row;
+            margin: 0;
+
+            .content_item {
+                .categories {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0 0 30px;
+
+                    li {
+                        a {
+                            line-height: 45px;
+                            width: 300px;
+                        }
+                    }
+                }
+
+                .form_wrapper {
+                    max-width: 400px;
+
+                    .forma {
+                        .btn_form_wrapper {
+                            justify-content: flex-start;
+                        }
+                    }
+                }
+
+                select {
+                    margin: 30px 0;
+                }
+
+                #product-list {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(6, 1fr);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 780px){
+        .breadcrumbs {
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+        .catalog_page_content {
+            display: block;
+            flex-direction: row;
+            margin: 0;
+
+            .content_item {
+                .categories {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        a {
+                            line-height: 45px;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .form_wrapper {
+                    max-width: 300px;
+                    margin-top: 30px;
+                    .forma {
+                        .btn_form_wrapper {
+                            display: block;
+                            .btn{
+                                width: 100%;
+
+                                &.grey{
+                                    margin: 20px 0 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                select {
+                    margin: 30px 0 0;
+
+                }
+
+                #product-list {
+                    display: block;
+                    li {
+                        margin-bottom: 20px;
+                        .invisibly {
+                            opacity: 1;
+                            pointer-events: auto;
+                            position: static;
+                            box-shadow: none;
+
+                            .size_wrapper {
+                                margin: 15px 0;
+                                .size {
+                                    .size_item {
+                                        padding: 11px 15px;
+                                    }
+                                }
+                            }
+
+                            .qty_wrapper {
+                                .qty {
+                                    position: relative;
+                                    margin-left: 35px;
+                                }
+
+                                .btn_wrapper {
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            box-shadow: 0 0 35px rgba(0, 2, 4, .32);
+
+                            & .invisibly {
+                                opacity: 1;
+                                pointer-events: auto;
+                            }
+                        }
+
+                    }
                 }
             }
         }
