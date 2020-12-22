@@ -1,5 +1,19 @@
 <?php require __DIR__ . '/.header.php'; ?>
 
+<?php
+$requestFilterSizes = isset($_GET['filter']['sizes']) ? (array) $_GET['filter']['sizes'] : [];
+$filterSizes = [
+    '100',
+    '110',
+    '120',
+    '130',
+    '140',
+    '150',
+    '160',
+    '170',
+];
+?>
+
 <!--SECTION CATALOG PAGE CONTENT START-->
 <section class="catalog_page_content_wrapper">
     <div class="container">
@@ -20,60 +34,39 @@
                 </ul>
 
                 <div class="form_wrapper">
-                    <form action="#" method="post">
+                    <form action="" method="get" id="filter-form">
                         <div class="forma">
                             <h4>Стоимость</h4>
+                            <div class="form_group_rage">
+                                <input type="text"
+                                       name="filter[price_from]"
+                                       value="<?= isset($_GET['filter']['price_from']) ? $_GET['filter']['price_from'] : ''; ?>">
+                                <input type="text"
+                                       name="filter[price_to]"
+                                       value="<?= isset($_GET['filter']['price_to']) ? $_GET['filter']['price_to'] : ''; ?>">
+                            </div>
+
                             <input type="range">
+
                             <h4>Высота</h4>
-                            <div class="form_group">
-                                <input type="checkbox" id="filter-size-100-input">
-                                <label for="filter-size-100-input">
-                                    <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    100см
-                                </label>
-                            </div>
-                            <div class="form_group">
-                                <input type="checkbox" id="filter-size-120-input">
-                                <label for="filter-size-120-input">
-                                    <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    120см
-                                </label>
-                            </div>
-                            <div class="form_group">
-                                <input type="checkbox" id="filter-size-130-input">
-                                <label for="filter-size-130-input">
-                                    <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    130см
-                                </label>
-                            </div>
-                            <div class="form_group">
-                                <input type="checkbox" id="filter-size-140-input">
-                                <label for="filter-size-140-input">
-                                    <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    140см
-                                </label>
-                            </div>
-                            <div class="form_group">
-                                <input type="checkbox" id="filter-size-150-input">
-                                <label for="filter-size-150-input">
-                                    <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    150см
-                                </label>
-                            </div>
-                            <div class="form_group">
-                                <input type="checkbox" id="filter-size-160-input">
-                                <label for="filter-size-160-input">
-                                    <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    160см
-                                </label>
-                            </div>
-                            <div class="form_group">
-                                <input type="checkbox" id="filter-size-180-input">
-                                <label for="filter-size-180-input">
-                                    <span><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    180см
-                                </label>
-                            </div>
+
+                            <?php foreach ($filterSizes as $filterSize): ?>
+                                <?php
+                                $isChecked = \in_array($filterSize, $requestFilterSizes);
+                                ?>
+                                <div class="form_group_checkbox">
+                                    <input type="checkbox"
+                                           id="filter-size-<?= $filterSize; ?>-input"
+                                           name="filter[sizes][]"
+                                           value="<?= $filterSize; ?>"
+                                        <?= $isChecked ? 'checked' : ''; ?>>
+                                    <label for="filter-size-<?= $filterSize; ?>-input">
+                                        <span><i class="fa fa-check" aria-hidden="true"></i></span>
+                                        <?= $filterSize; ?>см
+                                    </label>
+                                </div>
+                            <?php endforeach; ?>
+
                             <div class="btn_form_wrapper">
                                 <button class="btn" type="submit">Показать</button>
                                 <button class="btn grey" type="reset">Сбросить</button>
@@ -83,12 +76,12 @@
                 </div>
             </div>
             <div class="content_item">
-                <select name="sort">
+                <select name="sort" form="filter-form">
                     <option value="">Сортировать по ...</option>
-                    <option value="price">Цена, от меньшего к большему</option>
-                    <option value="-price">Цена, от большему к меньшего</option>
-                    <option value="name">По алфавиту, от А до Я</option>
-                    <option value="-name">По алфавиту, от Я до А</option>
+                    <option value="price" <?= $_GET['sort'] === 'price' ? 'selected' : ''; ?>>Цена, от меньшего к большему</option>
+                    <option value="-price" <?= $_GET['sort'] === '-price' ? 'selected' : ''; ?>>Цена, от большему к меньшего</option>
+                    <option value="name" <?= $_GET['sort'] === 'name' ? 'selected' : ''; ?>>По алфавиту, от А до Я</option>
+                    <option value="-name" <?= $_GET['sort'] === '-name' ? 'selected' : ''; ?>>По алфавиту, от Я до А</option>
                 </select>
 
                 <ul id="product-list"></ul>

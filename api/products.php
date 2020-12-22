@@ -10,8 +10,9 @@ $database = new Medoo([
     'database_file' => $file,
 ]);
 
-$sortBy = isset($_GET['sort_by']) ? $_GET['sort_by'] : 'id';
-$sortOrder = isset($_GET['sort_order']) ? $_GET['sort_order'] : 'ASC';
+$sort = isset($_GET['sort']) ? $_GET['sort'] : 'id';
+$sortBy = \trim($sort, '-');
+$sortOrder = \strpos($sort, '-') === 0 ? 'DESC' : 'ASC';
 $offset = isset($_GET['offset']) ? $_GET['offset'] : 0;
 $limit = isset($_GET['limit']) ? $_GET['limit'] : 10;
 

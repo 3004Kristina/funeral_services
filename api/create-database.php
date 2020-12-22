@@ -108,7 +108,7 @@ function generatePicture()
 
 function generateSizes()
 {
-    $sizeRanges = \range(80, 120, 5);
+    $sizeRanges = \range(100, 170, 10);
 
     $sizes = [
         (string) \getRandomElement($sizeRanges),

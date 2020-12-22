@@ -1,25 +1,6 @@
-DG.autoload(function() {
-    'use strict';
-
-    let myMap = new DG.Map('myMapId');
-
-    myMap.setCenter(new DG.GeoPoint(37.609218, 55.753559), 11);
-    myMap.controls.add(new DG.Controls.Zoom());
-
-    let marker = new DG.Markers.Common({geoPoint: new DG.GeoPoint(37.456261, 55.799279)}, {icon: new DG.Icon('/img/icons/location-pointer.png', new DG.Size(15, 15))});
-    let mark = new DG.Markers.Common({geoPoint: new DG.GeoPoint(37.696725, 55.771362)});
-
-
-    myMap.markers.add(marker);
-    myMap.markers.add(mark);
-});
-
-function getProducts(page = 1, filter = {}, sort_by = 'id', sort_order = 'ASC') {
-    let limit = 9,
+function getProducts(page = 1, filter = {}, sort = 'id') {
+    let limit = 12,
         offset = (page - 1) * limit;
-
-    sort_by = ['id', 'name', 'price'].includes(sort_by) ? sort_by : 'id';
-    sort_order = sort_order === 'DESC' ? 'DESC' : 'ASC';
 
     return new Promise((resolve, reject) => {
         jQuery.ajax({
@@ -29,8 +10,7 @@ function getProducts(page = 1, filter = {}, sort_by = 'id', sort_order = 'ASC') 
                 filter,
                 limit,
                 offset,
-                sort_by,
-                sort_order
+                sort
             },
             success(data) {
                 resolve(data);
@@ -74,13 +54,11 @@ jQuery(function() {
         jQuery('.prices_content_tabs .tab').not($tab).hide();
     });
 
-
-    jQuery('.size_wrapper .size .size_item').on('click', function(e) {
+    jQuery(document).on('click', '.size_wrapper .size .size_item', function(e) {
         let $this = jQuery(this);
         jQuery('.size_wrapper .size .size_item.active').removeClass('active');
         $this.addClass('active');
     });
-
 
     jQuery('.main_page_banner_carousel').slick({
         infinite: true,
@@ -104,43 +82,59 @@ jQuery(function() {
         jQuery(`.product_page_content .content_list .content_item .img_wrapper img[src="${$this.attr('src')}"]`).addClass('active');
     });
 
-    jQuery('.qty').each(function() {
-        let $qty = jQuery(this),
+    jQuery(document).on('click', '.qty .up', function(e) {
+        let $up = jQuery(this),
+            $qty = $up.closest('.qty'),
             $input = $qty.find('input[type="number"]'),
-            $up = $qty.find('.up'),
-            $down = $qty.find('.down');
+            res = $input.val();
 
-        $up.on('click', function() {
-            let res = $input.val();
-            res++;
-            $input.val(res);
-        });
+        res++;
+        $input.val(res);
+    });
 
-        $down.on('click', function() {
-            let res = $input.val();
-            res--;
-            $input.val(Math.max(res, 1));
+    jQuery(document).on('click', '.qty .down', function(e) {
+        let $up = jQuery(this),
+            $qty = $up.closest('.qty'),
+            $input = $qty.find('input[type="number"]'),
+            res = $input.val();
+
+        res--;
+        $input.val(Math.max(res, 1));
+    });
+
+    jQuery('.select_wrapper .funeral_calculator').each(function() {
+        let $this = jQuery(this);
+
+        $this.select2({
+            minimumResultsForSearch: Infinity,
+            placeholder: 'Не выбрано',
+            dropdownParent: $this.closest('.select_wrapper'),
+            width: '100%'
         });
     });
 
-    jQuery('.funeral_calculator').select2({
-        minimumResultsForSearch: Infinity,
-        placeholder: 'Не выбрано'
-    });
-
+    // Catalog page
     (() => {
-        let $productList = jQuery('#product-list');
+        let $productList = jQuery('#product-list'),
+            $filterForm = jQuery('#filter-form'),
+            $sortInput = jQuery('select[name="sort"]');
 
         if ($productList.length === 0) {
             return;
         }
 
-        let page = 1,
-            filter_price_from = null,
-            filter_price_to = null,
-            filter_sizes = [],
-            sort_by = 'id',
-            sort_order = 'ASC';
+        let query = Qs.parse(location.search ? location.search.slice(1) : ''),
+            page = query.page || 1,
+            filter_price_from = query?.filter?.price_from || null,
+            filter_price_to = query?.filter?.price_to || null,
+            filter_sizes = query?.filter?.sizes || [],
+            sort = query.sort || 'id';
+
+        console.log(query);
+
+        $sortInput.on('change', function(e) {
+            $filterForm.trigger('submit');
+        });
 
         function renderCatalogProducts() {
             let filter = {
@@ -149,13 +143,16 @@ jQuery(function() {
                 sizes: filter_sizes
             };
 
-            getProducts(page, filter, sort_by, sort_order).then((products) => {
+            getProducts(page, filter, sort).then((products) => {
                 let productHtml = products.map((product) => {
+                    let sizeElements = product.sizes.map((size, index) => {
+                        return `<div class="size_item ${index === 0 ? 'active' : ''}">${size}</div>`;
+                    });
+
                     return `<li>
-                    <a href="/product.php">
-                    <div class="image-wrapper">
+                    <a href="/product.php" class="image-wrapper">
                         <img src="${product.picture}" alt="">
-                    </div>
+                    </a>
                     <h2>${product.name}</h2>
                     <div class="descr">Lorem ipsum dolor sit amet.</div>
                     <div class="price">
@@ -164,20 +161,7 @@ jQuery(function() {
                     <div class="invisibly">
                     <div class="size_wrapper">
                         <h6>Высота, см.</h6>
-                        <div class="size">
-                            <div class="size_item">
-                                ${product.sizes[0]}
-                            </div>
-                            <div class="size_item active">
-                               ${product.sizes[1]}
-                            </div>
-                            <div class="size_item">
-                                ${product.sizes[2]}
-                            </div>
-                            <div class="size_item">
-                                ${product.sizes[3]}
-                            </div>
-                        </div>
+                        <div class="size">${sizeElements.join('')}</div>
                     </div>
                     <div class="qty_wrapper">
                         <div class="qty">
@@ -191,7 +175,6 @@ jQuery(function() {
                         </div>
                     </div>
                     </div>
-                    </a>
                </li>`;
                 });
 
@@ -200,27 +183,29 @@ jQuery(function() {
         }
 
         renderCatalogProducts();
+    })();
 
-        // setTimeout(() => {
-        //     filter_price_from = 1000;
-        //     filter_price_to = 5000;
-        //     filter_sizes = ['100'];
-        //
-        //     renderCatalogProducts();
-        // }, 5000);
+    // Contacts page
+    (() => {
+        let $map = document.getElementById('myMapId');
 
-        getProducts(
-            1,
-            {
-                price_from: 1000,
-                price_to: 8000,
-                sizes: ['100', '110']
-            },
-            'price',
-            'DESC'
-        )
-            .then(products => {
-                console.log('Список продуктов на 1-ой странице с фильтрами по ценам от 1000 до 8000 и по размерам "100" и "110"\n', products);
-            });
+        if ($map === null) {
+            return;
+        }
+
+        DG.autoload(function() {
+            'use strict';
+
+            let myMap = new DG.Map($map);
+
+            myMap.setCenter(new DG.GeoPoint(37.609218, 55.753559), 11);
+            myMap.controls.add(new DG.Controls.Zoom());
+
+            let marker = new DG.Markers.Common({geoPoint: new DG.GeoPoint(37.456261, 55.799279)}, {icon: new DG.Icon('/img/icons/location-pointer.png', new DG.Size(15, 15))});
+            let mark = new DG.Markers.Common({geoPoint: new DG.GeoPoint(37.696725, 55.771362)});
+
+            myMap.markers.add(marker);
+            myMap.markers.add(mark);
+        });
     })();
 });
