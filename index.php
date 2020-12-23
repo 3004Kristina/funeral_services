@@ -170,7 +170,112 @@
                         <button class="btn">Узнать подробнее</button>
                     </a>
                 </div>
-
+                <div class="tab" id="tab2" style="display: none">
+                    <a href="/product.php" class="tab_item">
+                        <img src="/img/product.png" alt="product">
+                        <h4>Венок 1,2 метра</h4>
+                        <p class="descr">
+                            Комбинированный с живыми цветами “Стандарт”
+                        </p>
+                        <p class="price">
+                            13 990
+                            <i class="fa fa-rub" aria-hidden="true"></i>
+                        </p>
+                        <button class="btn">Узнать подробнее</button>
+                    </a>
+                    <a href="/product.php" class="tab_item">
+                        <img src="/img/product.png" alt="product">
+                        <h4>Венок 1,2 метра</h4>
+                        <p class="descr">
+                            Комбинированный с живыми цветами “Стандарт”
+                        </p>
+                        <p class="price">
+                            13 990
+                            <i class="fa fa-rub" aria-hidden="true"></i>
+                        </p>
+                        <button class="btn">Узнать подробнее</button>
+                    </a>
+                    <a href="/product.php" class="tab_item">
+                        <img src="/img/product.png" alt="product">
+                        <h4>Венок 1,2 метра</h4>
+                        <p class="descr">
+                            Комбинированный с живыми цветами “Стандарт”
+                            fgdfhghfgjjfgj
+                            ghdghgh
+                            ghghdghgdh
+                        </p>
+                        <p class="price">
+                            13 990
+                            <i class="fa fa-rub" aria-hidden="true"></i>
+                        </p>
+                        <button class="btn">Узнать подробнее</button>
+                    </a>
+                    <a href="/product.php" class="tab_item">
+                        <img src="/img/product.png" alt="product">
+                        <h4>Венок 1,2 метра</h4>
+                        <p class="descr">
+                            Комбинированный с живыми цветами “Стандарт”
+                        </p>
+                        <p class="price">
+                            13 990
+                            <i class="fa fa-rub" aria-hidden="true"></i>
+                        </p>
+                        <button class="btn">Узнать подробнее</button>
+                    </a>
+                </div>
+                <div class="tab" id="tab3" style="display: none">
+                    <a href="/product.php" class="tab_item">
+                        <img src="/img/product.png" alt="product">
+                        <h4>Венок 1,2 метра</h4>
+                        <p class="descr">
+                            Комбинированный с живыми цветами “Стандарт”
+                        </p>
+                        <p class="price">
+                            13 990
+                            <i class="fa fa-rub" aria-hidden="true"></i>
+                        </p>
+                        <button class="btn">Узнать подробнее</button>
+                    </a>
+                    <a href="/product.php" class="tab_item">
+                        <img src="/img/product.png" alt="product">
+                        <h4>Венок 1,2 метра</h4>
+                        <p class="descr">
+                            Комбинированный с живыми цветами “Стандарт”
+                        </p>
+                        <p class="price">
+                            13 990
+                            <i class="fa fa-rub" aria-hidden="true"></i>
+                        </p>
+                        <button class="btn">Узнать подробнее</button>
+                    </a>
+                    <a href="/product.php" class="tab_item">
+                        <img src="/img/product.png" alt="product">
+                        <h4>Венок 1,2 метра</h4>
+                        <p class="descr">
+                            Комбинированный с живыми цветами “Стандарт”
+                            fgdfhghfgjjfgj
+                            ghdghgh
+                            ghghdghgdh
+                        </p>
+                        <p class="price">
+                            13 990
+                            <i class="fa fa-rub" aria-hidden="true"></i>
+                        </p>
+                        <button class="btn">Узнать подробнее</button>
+                    </a>
+                    <a href="/product.php" class="tab_item">
+                        <img src="/img/product.png" alt="product">
+                        <h4>Венок 1,2 метра</h4>
+                        <p class="descr">
+                            Комбинированный с живыми цветами “Стандарт”
+                        </p>
+                        <p class="price">
+                            13 990
+                            <i class="fa fa-rub" aria-hidden="true"></i>
+                        </p>
+                        <button class="btn">Узнать подробнее</button>
+                    </a>
+                </div>
             </div>
 
         </div>

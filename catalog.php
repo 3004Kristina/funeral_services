@@ -94,7 +94,392 @@ $filterSizes = [
                     <option value="-name" <?= (isset($_GET['sort']) ? $_GET['sort'] : null) === '-name' ? 'selected' : ''; ?>>По алфавиту, от Я до А</option>
                 </select>
 
-                <ul id="catalog-products"></ul>
+                <ul id="catalog-products">
+                    <li>
+                        <a href="/product.php" class="image-wrapper">
+                            <img src="/img/product.png" alt="catalog">
+                        </a>
+                        <h2>Венок 1,2 метра</h2>
+                        <div class="descr">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">
+                            3500 <i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                        <div class="invisibly">
+                            <div class="size_wrapper">
+                                <h6>Высота, см.</h6>
+                                <div class="size">
+                                    <div class="size_item">100</div>
+                                    <div class="size_item">120</div>
+                                    <div class="size_item">140</div>
+                                    <div class="size_item">160</div>
+                                </div>
+                            </div>
+                            <div class="qty_wrapper">
+                                <div class="qty">
+                                    <input type="number" value="1" step="1" min="1">
+                                    <button class="up"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                    <button class="down"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                </div>
+
+                                <div class="btn_wrapper">
+                                    <button class="btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/product.php" class="image-wrapper">
+                            <img src="/img/product.png" alt="catalog">
+                        </a>
+                        <h2>Венок 1,2 метра</h2>
+                        <div class="descr">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">
+                            3500 <i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                        <div class="invisibly">
+                            <div class="size_wrapper">
+                                <h6>Высота, см.</h6>
+                                <div class="size">
+                                    <div class="size_item">100</div>
+                                    <div class="size_item">120</div>
+                                    <div class="size_item">140</div>
+                                    <div class="size_item">160</div>
+                                </div>
+                            </div>
+                            <div class="qty_wrapper">
+                                <div class="qty">
+                                    <input type="number" value="1" step="1" min="1">
+                                    <button class="up"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                    <button class="down"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                </div>
+
+                                <div class="btn_wrapper">
+                                    <button class="btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/product.php" class="image-wrapper">
+                            <img src="/img/product.png" alt="catalog">
+                        </a>
+                        <h2>Венок 1,2 метра</h2>
+                        <div class="descr">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">
+                            3500 <i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                        <div class="invisibly">
+                            <div class="size_wrapper">
+                                <h6>Высота, см.</h6>
+                                <div class="size">
+                                    <div class="size_item">100</div>
+                                    <div class="size_item">120</div>
+                                    <div class="size_item">140</div>
+                                    <div class="size_item">160</div>
+                                </div>
+                            </div>
+                            <div class="qty_wrapper">
+                                <div class="qty">
+                                    <input type="number" value="1" step="1" min="1">
+                                    <button class="up"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                    <button class="down"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                </div>
+
+                                <div class="btn_wrapper">
+                                    <button class="btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/product.php" class="image-wrapper">
+                            <img src="/img/product.png" alt="catalog">
+                        </a>
+                        <h2>Венок 1,2 метра</h2>
+                        <div class="descr">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">
+                            3500 <i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                        <div class="invisibly">
+                            <div class="size_wrapper">
+                                <h6>Высота, см.</h6>
+                                <div class="size">
+                                    <div class="size_item">100</div>
+                                    <div class="size_item">120</div>
+                                    <div class="size_item">140</div>
+                                    <div class="size_item">160</div>
+                                </div>
+                            </div>
+                            <div class="qty_wrapper">
+                                <div class="qty">
+                                    <input type="number" value="1" step="1" min="1">
+                                    <button class="up"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                    <button class="down"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                </div>
+
+                                <div class="btn_wrapper">
+                                    <button class="btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/product.php" class="image-wrapper">
+                            <img src="/img/product.png" alt="catalog">
+                        </a>
+                        <h2>Венок 1,2 метра</h2>
+                        <div class="descr">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">
+                            3500 <i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                        <div class="invisibly">
+                            <div class="size_wrapper">
+                                <h6>Высота, см.</h6>
+                                <div class="size">
+                                    <div class="size_item">100</div>
+                                    <div class="size_item">120</div>
+                                    <div class="size_item">140</div>
+                                    <div class="size_item">160</div>
+                                </div>
+                            </div>
+                            <div class="qty_wrapper">
+                                <div class="qty">
+                                    <input type="number" value="1" step="1" min="1">
+                                    <button class="up"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                    <button class="down"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                </div>
+
+                                <div class="btn_wrapper">
+                                    <button class="btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/product.php" class="image-wrapper">
+                            <img src="/img/product.png" alt="catalog">
+                        </a>
+                        <h2>Венок 1,2 метра</h2>
+                        <div class="descr">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">
+                            3500 <i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                        <div class="invisibly">
+                            <div class="size_wrapper">
+                                <h6>Высота, см.</h6>
+                                <div class="size">
+                                    <div class="size_item">100</div>
+                                    <div class="size_item">120</div>
+                                    <div class="size_item">140</div>
+                                    <div class="size_item">160</div>
+                                </div>
+                            </div>
+                            <div class="qty_wrapper">
+                                <div class="qty">
+                                    <input type="number" value="1" step="1" min="1">
+                                    <button class="up"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                    <button class="down"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                </div>
+
+                                <div class="btn_wrapper">
+                                    <button class="btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/product.php" class="image-wrapper">
+                            <img src="/img/product.png" alt="catalog">
+                        </a>
+                        <h2>Венок 1,2 метра</h2>
+                        <div class="descr">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">
+                            3500 <i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                        <div class="invisibly">
+                            <div class="size_wrapper">
+                                <h6>Высота, см.</h6>
+                                <div class="size">
+                                    <div class="size_item">100</div>
+                                    <div class="size_item">120</div>
+                                    <div class="size_item">140</div>
+                                    <div class="size_item">160</div>
+                                </div>
+                            </div>
+                            <div class="qty_wrapper">
+                                <div class="qty">
+                                    <input type="number" value="1" step="1" min="1">
+                                    <button class="up"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                    <button class="down"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                </div>
+
+                                <div class="btn_wrapper">
+                                    <button class="btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/product.php" class="image-wrapper">
+                            <img src="/img/product.png" alt="catalog">
+                        </a>
+                        <h2>Венок 1,2 метра</h2>
+                        <div class="descr">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">
+                            3500 <i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                        <div class="invisibly">
+                            <div class="size_wrapper">
+                                <h6>Высота, см.</h6>
+                                <div class="size">
+                                    <div class="size_item">100</div>
+                                    <div class="size_item">120</div>
+                                    <div class="size_item">140</div>
+                                    <div class="size_item">160</div>
+                                </div>
+                            </div>
+                            <div class="qty_wrapper">
+                                <div class="qty">
+                                    <input type="number" value="1" step="1" min="1">
+                                    <button class="up"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                    <button class="down"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                </div>
+
+                                <div class="btn_wrapper">
+                                    <button class="btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/product.php" class="image-wrapper">
+                            <img src="/img/product.png" alt="catalog">
+                        </a>
+                        <h2>Венок 1,2 метра</h2>
+                        <div class="descr">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">
+                            3500 <i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                        <div class="invisibly">
+                            <div class="size_wrapper">
+                                <h6>Высота, см.</h6>
+                                <div class="size">
+                                    <div class="size_item">100</div>
+                                    <div class="size_item">120</div>
+                                    <div class="size_item">140</div>
+                                    <div class="size_item">160</div>
+                                </div>
+                            </div>
+                            <div class="qty_wrapper">
+                                <div class="qty">
+                                    <input type="number" value="1" step="1" min="1">
+                                    <button class="up"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                    <button class="down"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                </div>
+
+                                <div class="btn_wrapper">
+                                    <button class="btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/product.php" class="image-wrapper">
+                            <img src="/img/product.png" alt="catalog">
+                        </a>
+                        <h2>Венок 1,2 метра</h2>
+                        <div class="descr">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">
+                            3500 <i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                        <div class="invisibly">
+                            <div class="size_wrapper">
+                                <h6>Высота, см.</h6>
+                                <div class="size">
+                                    <div class="size_item">100</div>
+                                    <div class="size_item">120</div>
+                                    <div class="size_item">140</div>
+                                    <div class="size_item">160</div>
+                                </div>
+                            </div>
+                            <div class="qty_wrapper">
+                                <div class="qty">
+                                    <input type="number" value="1" step="1" min="1">
+                                    <button class="up"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                    <button class="down"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                </div>
+
+                                <div class="btn_wrapper">
+                                    <button class="btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/product.php" class="image-wrapper">
+                            <img src="/img/product.png" alt="catalog">
+                        </a>
+                        <h2>Венок 1,2 метра</h2>
+                        <div class="descr">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">
+                            3500 <i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                        <div class="invisibly">
+                            <div class="size_wrapper">
+                                <h6>Высота, см.</h6>
+                                <div class="size">
+                                    <div class="size_item">100</div>
+                                    <div class="size_item">120</div>
+                                    <div class="size_item">140</div>
+                                    <div class="size_item">160</div>
+                                </div>
+                            </div>
+                            <div class="qty_wrapper">
+                                <div class="qty">
+                                    <input type="number" value="1" step="1" min="1">
+                                    <button class="up"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                    <button class="down"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                </div>
+
+                                <div class="btn_wrapper">
+                                    <button class="btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/product.php" class="image-wrapper">
+                            <img src="/img/product.png" alt="catalog">
+                        </a>
+                        <h2>Венок 1,2 метра</h2>
+                        <div class="descr">Lorem ipsum dolor sit amet.</div>
+                        <div class="price">
+                            3500 <i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                        <div class="invisibly">
+                            <div class="size_wrapper">
+                                <h6>Высота, см.</h6>
+                                <div class="size">
+                                    <div class="size_item">100</div>
+                                    <div class="size_item">120</div>
+                                    <div class="size_item">140</div>
+                                    <div class="size_item">160</div>
+                                </div>
+                            </div>
+                            <div class="qty_wrapper">
+                                <div class="qty">
+                                    <input type="number" value="1" step="1" min="1">
+                                    <button class="up"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                                    <button class="down"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                </div>
+
+                                <div class="btn_wrapper">
+                                    <button class="btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
                 <ul id="catalog-paginator"></ul>
             </div>
 
