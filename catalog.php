@@ -56,7 +56,7 @@ $filterSizes = [
 
                             </div>
 
-                            <div id="slider-non-linear-step"></div>
+                            <div id="price-range"></div>
 
                             <h4>Высота</h4>
 

@@ -7,8 +7,8 @@
             <img src="/img/mainbanner.png" alt="banner">
             <div class="container">
                 <div class="carousel_content_wrapper">
-                    <h1>
-                        Организация похорон в Москве<br>
+                    <h1 class="glitch">
+                        Организация похорон в Москве
                         и Московской области
                     </h1>
                     <p>
@@ -35,37 +35,37 @@
                 <a href="#">
                     <img src="/img/images.png" alt="catalog">
                 </a>
-                <p class="title">Гробы</p>
+                <p class="title glitch">Гробы</p>
             </div>
             <div class="catalog_item">
                 <a href="#">
                     <img src="/img/venki-na-pohorony-2.png" alt="catalog">
                 </a>
-                <p class="title">Венки</p>
+                <p class="title glitch">Венки</p>
             </div>
             <div class="catalog_item">
                 <a href="#">
                     <img src="/img/regnum_picture_14735231851935592_normal.png" alt="catalog">
                 </a>
-                <p class="title">Траурные ленты</p>
+                <p class="title glitch">Траурные ленты</p>
             </div>
             <div class="catalog_item">
                 <a href="#">
                     <img src="/img/kr.png" alt="catalog">
                 </a>
-                <p class="title">Кресты</p>
+                <p class="title glitch">Кресты</p>
             </div>
             <div class="catalog_item">
                 <a href="#">
                     <img src="/img/grob.png" alt="catalog">
                 </a>
-                <p class="title">Ритуальный<br> текстиль</p>
+                <p class="title glitch">Ритуальный<br> текстиль</p>
             </div>
             <div class="catalog_item">
                 <a href="#">
                     <img src="/img/f_big1.png" alt="catalog">
                 </a>
-                <p class="title">Аксессуары</p>
+                <p class="title glitch">Аксессуары</p>
             </div>
         </div>
     </div>

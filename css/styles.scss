@@ -607,6 +607,7 @@ html, body {
         .carousel_content_wrapper {
             position: absolute;
             top: 130px;
+            max-width: 1000px;
 
 
             h1 {
@@ -619,6 +620,7 @@ html, body {
                 line-height: normal;
                 text-align: left;
                 text-transform: uppercase;
+                position: relative;
             }
 
             p {
@@ -630,7 +632,6 @@ html, body {
                 letter-spacing: normal;
                 line-height: 27.94px;
                 text-align: left;
-                max-width: 900px;
             }
         }
 
@@ -759,6 +760,7 @@ html, body {
             .carousel_content_wrapper {
                 position: absolute;
                 top: 100px;
+                max-width: 650px;
 
 
                 h1 {
@@ -769,7 +771,6 @@ html, body {
                 p {
                     margin: 0 0 0 40px;
                     font-size: 16px;
-                    max-width: 650px;
                 }
             }
 
@@ -800,6 +801,7 @@ html, body {
             .carousel_content_wrapper {
                 position: absolute;
                 top: 50px;
+                max-width: 290px;
 
                 h1 {
                     margin: 0 0 30px 0;
@@ -811,7 +813,6 @@ html, body {
                 p {
                     margin: 0;
                     font-size: 14px;
-                    max-width: 290px;
                     text-align: center;
                 }
             }
@@ -6594,7 +6595,7 @@ html, body {
                         }
                     }
 
-                    #slider-non-linear-step{
+                    #price-range{
                         margin: 25px 0 40px;
 
                         .noUi-connect{
@@ -6916,13 +6917,50 @@ html, body {
 
                 }
             }
+
+            #catalog-paginator{
+                list-style: none;
+                margin: 50px -10px 0;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+
+                li{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    a{
+                        display: block;
+                        margin: 0 10px;
+                        text-align: center;
+                        text-decoration: none;
+
+                        color: #111111;
+                    }
+
+                    &.active{
+                        background: #9e9d9d;
+
+                        & a{
+                            color: #ffffff;
+                        }
+                    }
+                }
+
+            }
         }
     }
 
     @media (max-width: 1260px){
         .catalog_page_content {
             .content_item {
-                #product-list {
+                #catalog-products {
                     grid-template-columns: repeat(2, 1fr);
                     grid-template-rows: repeat(6, 1fr);
                 }
@@ -6965,7 +7003,7 @@ html, body {
                     margin: 30px 0;
                 }
 
-                #product-list {
+                #catalog-products {
                     grid-template-columns: repeat(2, 1fr);
                     grid-template-rows: repeat(6, 1fr);
                 }
@@ -7022,7 +7060,7 @@ html, body {
 
                 }
 
-                #product-list {
+                #catalog-products {
                     display: block;
                     li {
                         margin-bottom: 20px;
@@ -7515,14 +7553,14 @@ html, body {
 
     &:before {
         left: -2px;
-        text-shadow: -1px 0 rgb(255, 0, 0);
-        animation: noise-anim 2s infinite linear alternate-reverse;
+        text-shadow: -1px 0 rgb(255, 255, 255);
+        animation: noise-anim 4s infinite linear alternate-reverse;
     }
 
     &:after {
         right: -2px;
-        text-shadow: 1px 0 rgb(0, 0, 255);
-        animation: noise-anim-2 2s infinite linear alternate-reverse;
+        text-shadow: 1px 0 rgb(255, 255, 255);
+        animation: noise-anim-2 4s infinite linear alternate-reverse;
     }
 }
 
